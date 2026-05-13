@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+
+# Large intermediate transcription artifacts.
+data/*.m4s
+data/*.wav
+data/lecture1_whisper_raw.json
+
+.DS_Store

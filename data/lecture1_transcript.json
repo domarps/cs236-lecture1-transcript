@@ -1,0 +1,6146 @@
+{
+  "title": "Stanford CS236: Deep Generative Models I 2023 | Lecture 1 - Introduction",
+  "videoId": "XZ0PMRWXBEU",
+  "videoUrl": "https://youtu.be/XZ0PMRWXBEU",
+  "source": "Whisper large-v3-turbo transcription from public lecture audio",
+  "segments": [
+    {
+      "index": 1,
+      "start": 0.0,
+      "end": 5.0,
+      "timestamp": "00:00",
+      "endTimestamp": "00:05",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=0s",
+      "text": "Welcome."
+    },
+    {
+      "index": 2,
+      "start": 5.0,
+      "end": 13.0,
+      "timestamp": "00:05",
+      "endTimestamp": "00:13",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=5s",
+      "text": "I'm super excited to see so many people interested in deep generative models."
+    },
+    {
+      "index": 3,
+      "start": 13.0,
+      "end": 17.0,
+      "timestamp": "00:13",
+      "endTimestamp": "00:17",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=13s",
+      "text": "So I'm Stefano, I'm the instructor of this class."
+    },
+    {
+      "index": 4,
+      "start": 17.0,
+      "end": 20.0,
+      "timestamp": "00:17",
+      "endTimestamp": "00:20",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=17s",
+      "text": "I've been teaching this course for a few years now."
+    },
+    {
+      "index": 5,
+      "start": 20.0,
+      "end": 26.0,
+      "timestamp": "00:20",
+      "endTimestamp": "00:26",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=20s",
+      "text": "I guess we started back when before all the generative AI hype"
+    },
+    {
+      "index": 6,
+      "start": 26.0,
+      "end": 30.0,
+      "timestamp": "00:26",
+      "endTimestamp": "00:30",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=26s",
+      "text": "and before this topic was so popular in the industry."
+    },
+    {
+      "index": 7,
+      "start": 30.0,
+      "end": 37.0,
+      "timestamp": "00:30",
+      "endTimestamp": "00:37",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=30s",
+      "text": "And so now you're lucky, you get to experience a pretty mature version of this course."
+    },
+    {
+      "index": 8,
+      "start": 37.0,
+      "end": 42.0,
+      "timestamp": "00:37",
+      "endTimestamp": "00:42",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=37s",
+      "text": "And it's going to be a pretty exciting quarter."
+    },
+    {
+      "index": 9,
+      "start": 42.0,
+      "end": 47.0,
+      "timestamp": "00:42",
+      "endTimestamp": "00:47",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=42s",
+      "text": "This is one of the hottest topics in industry right now."
+    },
+    {
+      "index": 10,
+      "start": 47.0,
+      "end": 50.0,
+      "timestamp": "00:47",
+      "endTimestamp": "00:50",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=47s",
+      "text": "There is of course a lot of excitement around the language models,"
+    },
+    {
+      "index": 11,
+      "start": 50.0,
+      "end": 53.0,
+      "timestamp": "00:50",
+      "endTimestamp": "00:53",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=50s",
+      "text": "about generative models of images, of videos."
+    },
+    {
+      "index": 12,
+      "start": 53.0,
+      "end": 57.0,
+      "timestamp": "00:53",
+      "endTimestamp": "00:57",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=53s",
+      "text": "And the goal of this class is to give you really the foundations"
+    },
+    {
+      "index": 13,
+      "start": 57.0,
+      "end": 64.0,
+      "timestamp": "00:57",
+      "endTimestamp": "01:04",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=57s",
+      "text": "to understand how the methods that are used in industry and in academic papers actually work."
+    },
+    {
+      "index": 14,
+      "start": 64.0,
+      "end": 72.0,
+      "timestamp": "01:04",
+      "endTimestamp": "01:12",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=64s",
+      "text": "And hopefully get up to speed with all the really fundamental concepts that you need"
+    },
+    {
+      "index": 15,
+      "start": 72.0,
+      "end": 74.0,
+      "timestamp": "01:12",
+      "endTimestamp": "01:14",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=72s",
+      "text": "in order to build a generative model."
+    },
+    {
+      "index": 16,
+      "start": 74.0,
+      "end": 79.0,
+      "timestamp": "01:14",
+      "endTimestamp": "01:19",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=74s",
+      "text": "And maybe in the future develop better systems, develop better models,"
+    },
+    {
+      "index": 17,
+      "start": 79.0,
+      "end": 86.0,
+      "timestamp": "01:19",
+      "endTimestamp": "01:26",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=79s",
+      "text": "deploy them in industry, start your own company that is sort of like leveraging these technologies."
+    },
+    {
+      "index": 18,
+      "start": 86.0,
+      "end": 97.0,
+      "timestamp": "01:26",
+      "endTimestamp": "01:37",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=86s",
+      "text": "So at a high level, you know, one of the reasons I think these models are becoming so important in AI and machine learning"
+    },
+    {
+      "index": 19,
+      "start": 97.0,
+      "end": 104.0,
+      "timestamp": "01:37",
+      "endTimestamp": "01:44",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=97s",
+      "text": "is that they really address kind of like the fundamental challenge that we encounter in a lot of subfields of AI,"
+    },
+    {
+      "index": 20,
+      "start": 104.0,
+      "end": 112.0,
+      "timestamp": "01:44",
+      "endTimestamp": "01:52",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=104s",
+      "text": "like computer vision, NLP, computational speech, even robotics, and so forth."
+    },
+    {
+      "index": 21,
+      "start": 112.0,
+      "end": 123.0,
+      "timestamp": "01:52",
+      "endTimestamp": "02:03",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=112s",
+      "text": "If you think about it in a lot of these settings, the fundamental challenge that you have is to make sense of some complex high dimensional signal or object,"
+    },
+    {
+      "index": 22,
+      "start": 123.0,
+      "end": 132.0,
+      "timestamp": "02:03",
+      "endTimestamp": "02:12",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=123s",
+      "text": "like an image or a speech signal or a sequence of tokens or a sequence of characters written in some language."
+    },
+    {
+      "index": 23,
+      "start": 132.0,
+      "end": 138.0,
+      "timestamp": "02:12",
+      "endTimestamp": "02:18",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=132s",
+      "text": "And this is challenging because, you know, from the perspective of a computer, if you think about an image,"
+    },
+    {
+      "index": 24,
+      "start": 138.0,
+      "end": 140.0,
+      "timestamp": "02:18",
+      "endTimestamp": "02:20",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=138s",
+      "text": "it's just like a big matrix of numbers."
+    },
+    {
+      "index": 25,
+      "start": 140.0,
+      "end": 147.0,
+      "timestamp": "02:20",
+      "endTimestamp": "02:27",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=140s",
+      "text": "And the difficulty is making sense of it, trying to figure out how to map that very complex high dimensional object"
+    },
+    {
+      "index": 26,
+      "start": 147.0,
+      "end": 156.0,
+      "timestamp": "02:27",
+      "endTimestamp": "02:36",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=147s",
+      "text": "to some kind of representation that is useful for decision making, for a variety of tasks that we care about,"
+    },
+    {
+      "index": 27,
+      "start": 156.0,
+      "end": 162.0,
+      "timestamp": "02:36",
+      "endTimestamp": "02:42",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=156s",
+      "text": "like figuring out what kind of objects are in the image or what kind of relationships they are in,"
+    },
+    {
+      "index": 28,
+      "start": 162.0,
+      "end": 167.0,
+      "timestamp": "02:42",
+      "endTimestamp": "02:47",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=162s",
+      "text": "what kind of materials they are made of, if they are moving, how fast, things like that."
+    },
+    {
+      "index": 29,
+      "start": 167.0,
+      "end": 171.0,
+      "timestamp": "02:47",
+      "endTimestamp": "02:51",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=167s",
+      "text": "And, you know, similarly, if you think about NLP, it's a similar story."
+    },
+    {
+      "index": 30,
+      "start": 171.0,
+      "end": 174.0,
+      "timestamp": "02:51",
+      "endTimestamp": "02:54",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=171s",
+      "text": "You have a sequence of characters and you need to make sense of it."
+    },
+    {
+      "index": 31,
+      "start": 174.0,
+      "end": 179.0,
+      "timestamp": "02:54",
+      "endTimestamp": "02:59",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=174s",
+      "text": "You need to understand what's the meaning, and maybe you want to translate it in a different language."
+    },
+    {
+      "index": 32,
+      "start": 179.0,
+      "end": 185.0,
+      "timestamp": "02:59",
+      "endTimestamp": "03:05",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=179s",
+      "text": "The challenge is really understanding what these complex objects really mean."
+    },
+    {
+      "index": 33,
+      "start": 185.0,
+      "end": 189.0,
+      "timestamp": "03:05",
+      "endTimestamp": "03:09",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=185s",
+      "text": "And understanding these objects is hard."
+    },
+    {
+      "index": 34,
+      "start": 189.0,
+      "end": 193.0,
+      "timestamp": "03:09",
+      "endTimestamp": "03:13",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=189s",
+      "text": "It's not even clear what it means to understand what an image means."
+    },
+    {
+      "index": 35,
+      "start": 193.0,
+      "end": 199.0,
+      "timestamp": "03:13",
+      "endTimestamp": "03:19",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=193s",
+      "text": "But I like to use this analogy inspired by this quote from Richard Feynman."
+    },
+    {
+      "index": 36,
+      "start": 199.0,
+      "end": 204.0,
+      "timestamp": "03:19",
+      "endTimestamp": "03:24",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=199s",
+      "text": "At some point he said, what I cannot create, I do not understand."
+    },
+    {
+      "index": 37,
+      "start": 204.0,
+      "end": 209.0,
+      "timestamp": "03:24",
+      "endTimestamp": "03:29",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=204s",
+      "text": "I think this was actually what they found on his whiteboard after he passed."
+    },
+    {
+      "index": 38,
+      "start": 209.0,
+      "end": 216.0,
+      "timestamp": "03:29",
+      "endTimestamp": "03:36",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=209s",
+      "text": "And, you know, what he meant in this case is that he was talking about mathematical theorems,"
+    },
+    {
+      "index": 39,
+      "start": 216.0,
+      "end": 223.0,
+      "timestamp": "03:36",
+      "endTimestamp": "03:43",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=216s",
+      "text": "and he was saying, if I can't really derive a proof by myself, I'm not really understanding the concept well enough."
+    },
+    {
+      "index": 40,
+      "start": 223.0,
+      "end": 243.0,
+      "timestamp": "03:43",
+      "endTimestamp": "04:03",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=223s",
+      "text": "But I think the analogy is that we can look at the contrapositive of this and kind of like the philosophy behind generative modeling approaches in AI is that if I claim I'm able to understand what an image means or what a piece of text means, then I should be able to create it."
+    },
+    {
+      "index": 41,
+      "start": 243.0,
+      "end": 247.0,
+      "timestamp": "04:03",
+      "endTimestamp": "04:07",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=243s",
+      "text": "I should be able to generate new images, I should be able to generate new text."
+    },
+    {
+      "index": 42,
+      "start": 247.0,
+      "end": 253.0,
+      "timestamp": "04:07",
+      "endTimestamp": "04:13",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=247s",
+      "text": "So if you claim you understand what an apple is, then you should be able to kind of like picture one in your head."
+    },
+    {
+      "index": 43,
+      "start": 253.0,
+      "end": 258.0,
+      "timestamp": "04:13",
+      "endTimestamp": "04:18",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=253s",
+      "text": "Maybe you're not able to create a photo of an apple, but you know sort of like what it means."
+    },
+    {
+      "index": 44,
+      "start": 258.0,
+      "end": 269.0,
+      "timestamp": "04:18",
+      "endTimestamp": "04:29",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=258s",
+      "text": "Or if you claim you can speak Italian, then you should be able to sort of like produce, you should be able to speak in that language, you should be able to write text in that language."
+    },
+    {
+      "index": 45,
+      "start": 269.0,
+      "end": 278.0,
+      "timestamp": "04:29",
+      "endTimestamp": "04:38",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=269s",
+      "text": "And that's kind of like the philosophy behind this idea of building generative models of images or generative models of text or multimodal generative models."
+    },
+    {
+      "index": 46,
+      "start": 278.0,
+      "end": 288.0,
+      "timestamp": "04:38",
+      "endTimestamp": "04:48",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=278s",
+      "text": "If you have these kind of capabilities, so you're able to generate text that is coherent, it makes sense, like in large language models like chat GPT, those kind of things."
+    },
+    {
+      "index": 47,
+      "start": 288.0,
+      "end": 301.0,
+      "timestamp": "04:48",
+      "endTimestamp": "05:01",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=288s",
+      "text": "And it probably means that you have a certain level of understanding, not only of the rules, the grammar of the language, but also about common sense, about what's going on in the world."
+    },
+    {
+      "index": 48,
+      "start": 301.0,
+      "end": 309.0,
+      "timestamp": "05:01",
+      "endTimestamp": "05:09",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=301s",
+      "text": "And essentially the only way you can do a good job of generating text that is meaningful is to have a certain level of understanding."
+    },
+    {
+      "index": 49,
+      "start": 309.0,
+      "end": 317.0,
+      "timestamp": "05:09",
+      "endTimestamp": "05:17",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=309s",
+      "text": "And if you have that level of understanding, then you can leverage it and you can use it to solve all the tasks that we care about."
+    },
+    {
+      "index": 50,
+      "start": 317.0,
+      "end": 328.0,
+      "timestamp": "05:17",
+      "endTimestamp": "05:28",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=317s",
+      "text": "So how do we go about building software, writing code that can generate, let's say, images or can generate text?"
+    },
+    {
+      "index": 51,
+      "start": 328.0,
+      "end": 333.0,
+      "timestamp": "05:28",
+      "endTimestamp": "05:33",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=328s",
+      "text": "You know, this is not necessarily a new problem."
+    },
+    {
+      "index": 52,
+      "start": 333.0,
+      "end": 336.0,
+      "timestamp": "05:33",
+      "endTimestamp": "05:36",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=333s",
+      "text": "It's not something that we are looking at for the first time."
+    },
+    {
+      "index": 53,
+      "start": 336.0,
+      "end": 344.0,
+      "timestamp": "05:36",
+      "endTimestamp": "05:44",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=336s",
+      "text": "People in computer graphics, for example, have been thinking about writing code that can generate images for a very long time."
+    },
+    {
+      "index": 54,
+      "start": 344.0,
+      "end": 347.0,
+      "timestamp": "05:44",
+      "endTimestamp": "05:47",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=344s",
+      "text": "And they made a lot of progress in this space."
+    },
+    {
+      "index": 55,
+      "start": 347.0,
+      "end": 355.0,
+      "timestamp": "05:47",
+      "endTimestamp": "05:55",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=347s",
+      "text": "And so you can kind of think of the setting as something like where you're given a high level description of a scene."
+    },
+    {
+      "index": 56,
+      "start": 355.0,
+      "end": 360.0,
+      "timestamp": "05:55",
+      "endTimestamp": "06:00",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=355s",
+      "text": "Maybe there are different kinds of objects of different colors, different shapes."
+    },
+    {
+      "index": 57,
+      "start": 360.0,
+      "end": 362.0,
+      "timestamp": "06:00",
+      "endTimestamp": "06:02",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=360s",
+      "text": "Maybe you have a viewpoint."
+    },
+    {
+      "index": 58,
+      "start": 362.0,
+      "end": 373.0,
+      "timestamp": "06:02",
+      "endTimestamp": "06:13",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=362s",
+      "text": "And the goal is to kind of like write a renderer that can produce an image that corresponds to that high level description."
+    },
+    {
+      "index": 59,
+      "start": 373.0,
+      "end": 390.0,
+      "timestamp": "06:13",
+      "endTimestamp": "06:30",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=373s",
+      "text": "And again, the idea is that if you can do this, then you probably have a reasonable understanding of what it means, what the concept of a cube is, what the concept of a cylinder is, what colors mean, relative position."
+    },
+    {
+      "index": 60,
+      "start": 390.0,
+      "end": 397.0,
+      "timestamp": "06:30",
+      "endTimestamp": "06:37",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=390s",
+      "text": "And in fact, if you can do this well, then you can imagine a procedure where you try to invert this process."
+    },
+    {
+      "index": 61,
+      "start": 397.0,
+      "end": 405.0,
+      "timestamp": "06:37",
+      "endTimestamp": "06:45",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=397s",
+      "text": "And you know, given an image, you can try to figure out what was the high level description that produced this scene."
+    },
+    {
+      "index": 62,
+      "start": 405.0,
+      "end": 417.0,
+      "timestamp": "06:45",
+      "endTimestamp": "06:57",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=405s",
+      "text": "And to the extent that you don't have sort of like computational constraints and you can do this efficiently, this gives you a way to think about computer vision in terms of inverse graphics."
+    },
+    {
+      "index": 63,
+      "start": 417.0,
+      "end": 433.0,
+      "timestamp": "06:57",
+      "endTimestamp": "07:13",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=417s",
+      "text": "So if you have a process that can generate images well, and you are somehow able to invert it, then you are making progress towards computer vision tasks because you are able to really understand these high level descriptions of the scenes."
+    },
+    {
+      "index": 64,
+      "start": 433.0,
+      "end": 438.0,
+      "timestamp": "07:13",
+      "endTimestamp": "07:18",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=433s",
+      "text": "And this is not going to be a course on computer graphics."
+    },
+    {
+      "index": 65,
+      "start": 438.0,
+      "end": 443.0,
+      "timestamp": "07:18",
+      "endTimestamp": "07:23",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=438s",
+      "text": "We are going to be looking at very different kind of models, but they will have a similar structure."
+    },
+    {
+      "index": 66,
+      "start": 443.0,
+      "end": 447.0,
+      "timestamp": "07:23",
+      "endTimestamp": "07:27",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=443s",
+      "text": "Many of them will have a similar structure where there is going to be a generative component."
+    },
+    {
+      "index": 67,
+      "start": 447.0,
+      "end": 455.0,
+      "timestamp": "07:27",
+      "endTimestamp": "07:35",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=447s",
+      "text": "And then often there is going to be latent variables that you can kind of like infer given the raw sensory inputs in this case."
+    },
+    {
+      "index": 68,
+      "start": 455.0,
+      "end": 460.0,
+      "timestamp": "07:35",
+      "endTimestamp": "07:40",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=455s",
+      "text": "And you can use that to get features, to get representations."
+    },
+    {
+      "index": 69,
+      "start": 460.0,
+      "end": 466.0,
+      "timestamp": "07:40",
+      "endTimestamp": "07:46",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=460s",
+      "text": "You can use them to fine tune your models, to solve computer vision tasks."
+    },
+    {
+      "index": 70,
+      "start": 466.0,
+      "end": 475.0,
+      "timestamp": "07:46",
+      "endTimestamp": "07:55",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=466s",
+      "text": "And so this kind of philosophy and this kind of structure will actually show up in the kind of models that we'll build in the class."
+    },
+    {
+      "index": 71,
+      "start": 475.0,
+      "end": 480.0,
+      "timestamp": "07:55",
+      "endTimestamp": "08:00",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=475s",
+      "text": "So the kind of models we're going to work on, they are not graphics based."
+    },
+    {
+      "index": 72,
+      "start": 480.0,
+      "end": 482.0,
+      "timestamp": "08:00",
+      "endTimestamp": "08:02",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=480s",
+      "text": "They are going to be statistical models."
+    },
+    {
+      "index": 73,
+      "start": 482.0,
+      "end": 488.0,
+      "timestamp": "08:02",
+      "endTimestamp": "08:08",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=482s",
+      "text": "So we're only going to be talking about models that are based on machine learning techniques."
+    },
+    {
+      "index": 74,
+      "start": 488.0,
+      "end": 495.0,
+      "timestamp": "08:08",
+      "endTimestamp": "08:15",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=488s",
+      "text": "And so the generative models that we're going to work with are going to be based on a combination of data and prior knowledge."
+    },
+    {
+      "index": 75,
+      "start": 495.0,
+      "end": 500.0,
+      "timestamp": "08:15",
+      "endTimestamp": "08:20",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=495s",
+      "text": "And so, you know, priors are always necessary."
+    },
+    {
+      "index": 76,
+      "start": 500.0,
+      "end": 503.0,
+      "timestamp": "08:20",
+      "endTimestamp": "08:23",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=500s",
+      "text": "But you can imagine that there is a spectrum, right?"
+    },
+    {
+      "index": 77,
+      "start": 503.0,
+      "end": 505.0,
+      "timestamp": "08:23",
+      "endTimestamp": "08:25",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=503s",
+      "text": "You can rely more on data."
+    },
+    {
+      "index": 78,
+      "start": 505.0,
+      "end": 507.0,
+      "timestamp": "08:25",
+      "endTimestamp": "08:27",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=505s",
+      "text": "You can rely more on priors."
+    },
+    {
+      "index": 79,
+      "start": 507.0,
+      "end": 513.0,
+      "timestamp": "08:27",
+      "endTimestamp": "08:33",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=507s",
+      "text": "And you can kind of like think of computer graphics as sort of like lying on this extreme,"
+    },
+    {
+      "index": 80,
+      "start": 513.0,
+      "end": 522.0,
+      "timestamp": "08:33",
+      "endTimestamp": "08:42",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=513s",
+      "text": "where you leverage a lot of knowledge about physics, about light transport, about properties of objects to come up with good renderers."
+    },
+    {
+      "index": 81,
+      "start": 522.0,
+      "end": 531.0,
+      "timestamp": "08:42",
+      "endTimestamp": "08:51",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=522s",
+      "text": "This course is going to be focusing on methods that are much more data driven, where we're going to be trying to use as little prior knowledge as possible,"
+    },
+    {
+      "index": 82,
+      "start": 531.0,
+      "end": 534.0,
+      "timestamp": "08:51",
+      "endTimestamp": "08:54",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=531s",
+      "text": "and instead leverage data."
+    },
+    {
+      "index": 83,
+      "start": 534.0,
+      "end": 539.0,
+      "timestamp": "08:54",
+      "endTimestamp": "08:59",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=534s",
+      "text": "Large data sets of images or text, perhaps collected on the internet."
+    },
+    {
+      "index": 84,
+      "start": 539.0,
+      "end": 556.0,
+      "timestamp": "08:59",
+      "endTimestamp": "09:16",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=539s",
+      "text": "And, yeah, so at a very high level, these generative models are just going to be probability distributions over, let's say, images x, or over sequences of text x."
+    },
+    {
+      "index": 85,
+      "start": 556.0,
+      "end": 558.0,
+      "timestamp": "09:16",
+      "endTimestamp": "09:18",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=556s",
+      "text": "And so in that sense, they are statistical."
+    },
+    {
+      "index": 86,
+      "start": 558.0,
+      "end": 567.0,
+      "timestamp": "09:18",
+      "endTimestamp": "09:27",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=558s",
+      "text": "And we're going to be building these models using a combination of data, which you can think of as samples from this probability distribution."
+    },
+    {
+      "index": 87,
+      "start": 567.0,
+      "end": 575.0,
+      "timestamp": "09:27",
+      "endTimestamp": "09:35",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=567s",
+      "text": "And in this case, the prior knowledge is basically going to be a mix of the kind of architectures you're going to be using,"
+    },
+    {
+      "index": 88,
+      "start": 575.0,
+      "end": 578.0,
+      "timestamp": "09:35",
+      "endTimestamp": "09:38",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=575s",
+      "text": "the kind of loss functions that you're going to be using for training the models,"
+    },
+    {
+      "index": 89,
+      "start": 578.0,
+      "end": 585.0,
+      "timestamp": "09:38",
+      "endTimestamp": "09:45",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=578s",
+      "text": "the kind of optimizer that you're going to be using to try to produce the loss function as much as possible."
+    },
+    {
+      "index": 90,
+      "start": 585.0,
+      "end": 598.0,
+      "timestamp": "09:45",
+      "endTimestamp": "09:58",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=585s",
+      "text": "And this combination, having access to good data and the right kind of like priors, is what enables you to build, hopefully, a good statistical generative model."
+    },
+    {
+      "index": 91,
+      "start": 598.0,
+      "end": 605.0,
+      "timestamp": "09:58",
+      "endTimestamp": "10:05",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=598s",
+      "text": "But at the end of the day, kind of like the abstraction is that we're going to be working with probability distributions."
+    },
+    {
+      "index": 92,
+      "start": 605.0,
+      "end": 614.0,
+      "timestamp": "10:05",
+      "endTimestamp": "10:14",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=605s",
+      "text": "And you can just think of it as a function that takes any input x as input, let's say any image, and maps it to some kind of like scalar probability value,"
+    },
+    {
+      "index": 93,
+      "start": 614.0,
+      "end": 623.0,
+      "timestamp": "10:14",
+      "endTimestamp": "10:23",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=614s",
+      "text": "which basically tells you how likely is this particular input image x according to my generative model."
+    },
+    {
+      "index": 94,
+      "start": 623.0,
+      "end": 629.0,
+      "timestamp": "10:23",
+      "endTimestamp": "10:29",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=623s",
+      "text": "And this might not look like a generative model directly."
+    },
+    {
+      "index": 95,
+      "start": 629.0,
+      "end": 634.0,
+      "timestamp": "10:29",
+      "endTimestamp": "10:34",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=629s",
+      "text": "It looks like how do you actually generate data if you have access to this kind of object."
+    },
+    {
+      "index": 96,
+      "start": 634.0,
+      "end": 641.0,
+      "timestamp": "10:34",
+      "endTimestamp": "10:41",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=634s",
+      "text": "The idea is that you can basically generate samples from this probability distribution to create new objects."
+    },
+    {
+      "index": 97,
+      "start": 641.0,
+      "end": 646.0,
+      "timestamp": "10:41",
+      "endTimestamp": "10:46",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=641s",
+      "text": "So you train a model, you learn this probability distribution, and then you sample from it."
+    },
+    {
+      "index": 98,
+      "start": 646.0,
+      "end": 655.0,
+      "timestamp": "10:46",
+      "endTimestamp": "10:55",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=646s",
+      "text": "And by doing that, you generate new images that hopefully look like the ones you've used for training the model."
+    },
+    {
+      "index": 99,
+      "start": 655.0,
+      "end": 657.0,
+      "timestamp": "10:55",
+      "endTimestamp": "10:57",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=655s",
+      "text": "So that's the structure."
+    },
+    {
+      "index": 100,
+      "start": 657.0,
+      "end": 662.0,
+      "timestamp": "10:57",
+      "endTimestamp": "11:02",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=657s",
+      "text": "So in some sense, what we're trying to do is we're trying to build data simulators."
+    },
+    {
+      "index": 101,
+      "start": 662.0,
+      "end": 667.0,
+      "timestamp": "11:02",
+      "endTimestamp": "11:07",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=662s",
+      "text": "So we often think of data as an input to our machine learning problems."
+    },
+    {
+      "index": 102,
+      "start": 667.0,
+      "end": 673.0,
+      "timestamp": "11:07",
+      "endTimestamp": "11:13",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=667s",
+      "text": "Here we're kind of like changing, turning things around, and we're thinking of data as being an output."
+    },
+    {
+      "index": 103,
+      "start": 673.0,
+      "end": 681.0,
+      "timestamp": "11:13",
+      "endTimestamp": "11:21",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=673s",
+      "text": "So we need to think about different kinds of machine learning models that we can use to simulate, to generate data."
+    },
+    {
+      "index": 104,
+      "start": 681.0,
+      "end": 686.0,
+      "timestamp": "11:21",
+      "endTimestamp": "11:26",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=681s",
+      "text": "Of course, this looks a little bit weird because we just said we're going to use data to build these models."
+    },
+    {
+      "index": 105,
+      "start": 686.0,
+      "end": 693.0,
+      "timestamp": "11:26",
+      "endTimestamp": "11:33",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=686s",
+      "text": "So indeed, you know, the idea is that we're going to use data to build a model that then we can use to generate new data."
+    },
+    {
+      "index": 106,
+      "start": 693.0,
+      "end": 702.0,
+      "timestamp": "11:33",
+      "endTimestamp": "11:42",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=693s",
+      "text": "And this is useful because often we're going to be interested in simulators that we can control through control signals."
+    },
+    {
+      "index": 107,
+      "start": 702.0,
+      "end": 710.0,
+      "timestamp": "11:42",
+      "endTimestamp": "11:50",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=702s",
+      "text": "And we'll see some examples of the kind of control signals you might want to use to control your generative process."
+    },
+    {
+      "index": 108,
+      "start": 710.0,
+      "end": 719.0,
+      "timestamp": "11:50",
+      "endTimestamp": "11:59",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=710s",
+      "text": "For example, you might have a model that can generate images, and you can control it by providing a caption of the kind of images you want."
+    },
+    {
+      "index": 109,
+      "start": 719.0,
+      "end": 731.0,
+      "timestamp": "11:59",
+      "endTimestamp": "12:11",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=719s",
+      "text": "Or you might have a model that can, again, generate images, and you can control it by providing maybe black and white images, and you can use it to produce a colorized version of the image."
+    },
+    {
+      "index": 110,
+      "start": 731.0,
+      "end": 741.0,
+      "timestamp": "12:11",
+      "endTimestamp": "12:21",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=731s",
+      "text": "Or maybe you have a data simulator that can produce text in English, and you can control the generative process by feeding in text in a different language, maybe in Chinese."
+    },
+    {
+      "index": 111,
+      "start": 741.0,
+      "end": 747.0,
+      "timestamp": "12:21",
+      "endTimestamp": "12:27",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=741s",
+      "text": "That's how you build machine translation tools."
+    },
+    {
+      "index": 112,
+      "start": 747.0,
+      "end": 751.0,
+      "timestamp": "12:27",
+      "endTimestamp": "12:31",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=747s",
+      "text": "The API is going to be, again, that of a probability distribution."
+    },
+    {
+      "index": 113,
+      "start": 751.0,
+      "end": 760.0,
+      "timestamp": "12:31",
+      "endTimestamp": "12:40",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=751s",
+      "text": "So really, you're going to be able to, for a lot of these models, you're going to be able to also query the model with potential data points."
+    },
+    {
+      "index": 114,
+      "start": 760.0,
+      "end": 766.0,
+      "timestamp": "12:40",
+      "endTimestamp": "12:46",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=760s",
+      "text": "And the model will be able to tell you whether or not they are likely to be generated by this data simulator or not."
+    },
+    {
+      "index": 115,
+      "start": 766.0,
+      "end": 776.0,
+      "timestamp": "12:46",
+      "endTimestamp": "12:56",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=766s",
+      "text": "So in some sense, it also allows you to build a sort of understanding over what kind of data points make sense and which ones don't, which is going to be useful for some applications."
+    },
+    {
+      "index": 116,
+      "start": 776.0,
+      "end": 781.0,
+      "timestamp": "12:56",
+      "endTimestamp": "13:01",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=776s",
+      "text": "And really, this data simulator is, at the end of the day, a statistical model."
+    },
+    {
+      "index": 117,
+      "start": 781.0,
+      "end": 784.0,
+      "timestamp": "13:01",
+      "endTimestamp": "13:04",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=781s",
+      "text": "It's what we call in machine learning a generative model."
+    },
+    {
+      "index": 118,
+      "start": 784.0,
+      "end": 788.0,
+      "timestamp": "13:04",
+      "endTimestamp": "13:08",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=784s",
+      "text": "And in particular, in this class, we're going to be thinking about deep generative models,"
+    },
+    {
+      "index": 119,
+      "start": 788.0,
+      "end": 799.0,
+      "timestamp": "13:08",
+      "endTimestamp": "13:19",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=788s",
+      "text": "where we're going to be using neural networks, deep learning kind of ideas to implement this piece of code that gives you these capabilities of generating data."
+    },
+    {
+      "index": 120,
+      "start": 799.0,
+      "end": 811.0,
+      "timestamp": "13:19",
+      "endTimestamp": "13:31",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=799s",
+      "text": "And to give you a few examples, if you have a generative model of images, you might be able to control it, let's say, using sketches."
+    },
+    {
+      "index": 121,
+      "start": 811.0,
+      "end": 821.0,
+      "timestamp": "13:31",
+      "endTimestamp": "13:41",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=811s",
+      "text": "Maybe you're not good at painting, and you can only produce a rough sketch of a bedroom, and then you fit it as a control signal into your generative model,"
+    },
+    {
+      "index": 122,
+      "start": 821.0,
+      "end": 831.0,
+      "timestamp": "13:41",
+      "endTimestamp": "13:51",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=821s",
+      "text": "and you can use it to produce realistic images that have the structure of the stroke painting that you provide, but they look much better."
+    },
+    {
+      "index": 123,
+      "start": 831.0,
+      "end": 838.0,
+      "timestamp": "13:51",
+      "endTimestamp": "13:58",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=831s",
+      "text": "Or you can do maybe text-to-image kind of things, where if you have a generative model that has been trained on paintings,"
+    },
+    {
+      "index": 124,
+      "start": 838.0,
+      "end": 848.0,
+      "timestamp": "13:58",
+      "endTimestamp": "14:08",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=838s",
+      "text": "then you can control it through captions, and you can ask the model to generate a new painting that corresponds to the description that is provided by the user."
+    },
+    {
+      "index": 125,
+      "start": 848.0,
+      "end": 858.0,
+      "timestamp": "14:08",
+      "endTimestamp": "14:18",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=848s",
+      "text": "Other examples that you might not think about immediately could be something like you have a generative model over medical images."
+    },
+    {
+      "index": 126,
+      "start": 858.0,
+      "end": 864.0,
+      "timestamp": "14:18",
+      "endTimestamp": "14:24",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=858s",
+      "text": "And in this case, you might use an actual signal coming from an MRI machine or a CT scan machine,"
+    },
+    {
+      "index": 127,
+      "start": 864.0,
+      "end": 871.0,
+      "timestamp": "14:24",
+      "endTimestamp": "14:31",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=864s",
+      "text": "and you can use that signal to sort of reconstruct the medical image, the thing you actually care about,"
+    },
+    {
+      "index": 128,
+      "start": 871.0,
+      "end": 876.0,
+      "timestamp": "14:31",
+      "endTimestamp": "14:36",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=871s",
+      "text": "given this kind of measurement that is coming from an actual machine."
+    },
+    {
+      "index": 129,
+      "start": 876.0,
+      "end": 882.0,
+      "timestamp": "14:36",
+      "endTimestamp": "14:42",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=876s",
+      "text": "And in this kind of application, generative models have shown to be very effective,"
+    },
+    {
+      "index": 130,
+      "start": 882.0,
+      "end": 890.0,
+      "timestamp": "14:42",
+      "endTimestamp": "14:50",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=882s",
+      "text": "because they can reduce kind of like the number of measurements, the amount of radiation that you have to give to the patient"
+    },
+    {
+      "index": 131,
+      "start": 890.0,
+      "end": 897.0,
+      "timestamp": "14:50",
+      "endTimestamp": "14:57",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=890s",
+      "text": "to get a measurement that is good enough to produce the medical images that the doctor needs to come up with a diagnosis."
+    },
+    {
+      "index": 132,
+      "start": 897.0,
+      "end": 906.0,
+      "timestamp": "14:57",
+      "endTimestamp": "15:06",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=897s",
+      "text": "An example of the kind of thing you can do if you can evaluate probabilities is to do outlier detection."
+    },
+    {
+      "index": 133,
+      "start": 906.0,
+      "end": 910.0,
+      "timestamp": "15:06",
+      "endTimestamp": "15:10",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=906s",
+      "text": "Actually, they're going to be playing with this in the homework, a variant of this."
+    },
+    {
+      "index": 134,
+      "start": 910.0,
+      "end": 916.0,
+      "timestamp": "15:10",
+      "endTimestamp": "15:16",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=910s",
+      "text": "If you have a generative model that understands traffic signs, you might be able to say,"
+    },
+    {
+      "index": 135,
+      "start": 916.0,
+      "end": 921.0,
+      "timestamp": "15:16",
+      "endTimestamp": "15:21",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=916s",
+      "text": "OK, this looks like a reasonable traffic sign you might encounter on the streets."
+    },
+    {
+      "index": 136,
+      "start": 921.0,
+      "end": 925.0,
+      "timestamp": "15:21",
+      "endTimestamp": "15:25",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=921s",
+      "text": "Well, if I feed you something like this, some kind of adversarial example,"
+    },
+    {
+      "index": 137,
+      "start": 925.0,
+      "end": 932.0,
+      "timestamp": "15:25",
+      "endTimestamp": "15:32",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=925s",
+      "text": "somebody's trying to cause trouble to your self-driving vehicle, the model might be able to say,"
+    },
+    {
+      "index": 138,
+      "start": 932.0,
+      "end": 938.0,
+      "timestamp": "15:32",
+      "endTimestamp": "15:38",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=932s",
+      "text": "no, this looks like a low probability thing, this is weird, do something about it, maybe don't trust it,"
+    },
+    {
+      "index": 139,
+      "start": 938.0,
+      "end": 941.0,
+      "timestamp": "15:38",
+      "endTimestamp": "15:41",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=938s",
+      "text": "ask a human for help, or something like that."
+    },
+    {
+      "index": 140,
+      "start": 941.0,
+      "end": 947.0,
+      "timestamp": "15:41",
+      "endTimestamp": "15:47",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=941s",
+      "text": "Right, and this is really an exciting time to study generative models,"
+    },
+    {
+      "index": 141,
+      "start": 947.0,
+      "end": 953.0,
+      "timestamp": "15:47",
+      "endTimestamp": "15:53",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=947s",
+      "text": "because there's been a lot of progress over many different modalities."
+    },
+    {
+      "index": 142,
+      "start": 953.0,
+      "end": 959.0,
+      "timestamp": "15:53",
+      "endTimestamp": "15:59",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=953s",
+      "text": "I'm going to start with images, because that's where I've done a lot of my research."
+    },
+    {
+      "index": 143,
+      "start": 959.0,
+      "end": 966.0,
+      "timestamp": "15:59",
+      "endTimestamp": "16:06",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=959s",
+      "text": "When I started working in this space about 10 years ago, these were the sort of images that we were able to generate."
+    },
+    {
+      "index": 144,
+      "start": 966.0,
+      "end": 970.0,
+      "timestamp": "16:06",
+      "endTimestamp": "16:10",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=966s",
+      "text": "And even that was already very, very remarkable."
+    },
+    {
+      "index": 145,
+      "start": 970.0,
+      "end": 978.0,
+      "timestamp": "16:10",
+      "endTimestamp": "16:18",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=970s",
+      "text": "People were very surprised that it was possible to train machine learning systems to produce images of people"
+    },
+    {
+      "index": 146,
+      "start": 978.0,
+      "end": 983.0,
+      "timestamp": "16:18",
+      "endTimestamp": "16:23",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=978s",
+      "text": "that sort of are black and white, and they roughly had the right shape."
+    },
+    {
+      "index": 147,
+      "start": 983.0,
+      "end": 986.0,
+      "timestamp": "16:23",
+      "endTimestamp": "16:26",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=983s",
+      "text": "People were very impressed by those sort of results."
+    },
+    {
+      "index": 148,
+      "start": 986.0,
+      "end": 993.0,
+      "timestamp": "16:26",
+      "endTimestamp": "16:33",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=986s",
+      "text": "And you can see that over a few years, this progress was largely driven by generative adversarial networks,"
+    },
+    {
+      "index": 149,
+      "start": 993.0,
+      "end": 997.0,
+      "timestamp": "16:33",
+      "endTimestamp": "16:37",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=993s",
+      "text": "which is a class of generative models we're going to be talking about."
+    },
+    {
+      "index": 150,
+      "start": 997.0,
+      "end": 1002.0,
+      "timestamp": "16:37",
+      "endTimestamp": "16:42",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=997s",
+      "text": "You can kind of see how the generations are becoming better and better, higher resolution, more detail,"
+    },
+    {
+      "index": 151,
+      "start": 1002.0,
+      "end": 1005.0,
+      "timestamp": "16:42",
+      "endTimestamp": "16:45",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1002s",
+      "text": "more realistic kind of images of people."
+    },
+    {
+      "index": 152,
+      "start": 1005.0,
+      "end": 1011.0,
+      "timestamp": "16:45",
+      "endTimestamp": "16:51",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1005s",
+      "text": "One of the big improvements that happened over the last two or three years,"
+    },
+    {
+      "index": 153,
+      "start": 1011.0,
+      "end": 1018.0,
+      "timestamp": "16:51",
+      "endTimestamp": "16:58",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1011s",
+      "text": "which was actually largely coming out of Stanford, Yang Song, who was a PhD student in my group,"
+    },
+    {
+      "index": 154,
+      "start": 1018.0,
+      "end": 1024.0,
+      "timestamp": "16:58",
+      "endTimestamp": "17:04",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1018s",
+      "text": "came up with this idea of using score-based diffusion models,"
+    },
+    {
+      "index": 155,
+      "start": 1024.0,
+      "end": 1029.0,
+      "timestamp": "17:04",
+      "endTimestamp": "17:09",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1024s",
+      "text": "which is a different kind of generative models that we're also going to be talking about in this course,"
+    },
+    {
+      "index": 156,
+      "start": 1029.0,
+      "end": 1034.0,
+      "timestamp": "17:09",
+      "endTimestamp": "17:14",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1029s",
+      "text": "and was able to further push the state of the art, for example, generating images very high,"
+    },
+    {
+      "index": 157,
+      "start": 1034.0,
+      "end": 1037.0,
+      "timestamp": "17:14",
+      "endTimestamp": "17:17",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1034s",
+      "text": "resolution images that look like this."
+    },
+    {
+      "index": 158,
+      "start": 1037.0,
+      "end": 1039.0,
+      "timestamp": "17:17",
+      "endTimestamp": "17:19",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1037s",
+      "text": "Like these people don't exist."
+    },
+    {
+      "index": 159,
+      "start": 1039.0,
+      "end": 1045.0,
+      "timestamp": "17:19",
+      "endTimestamp": "17:25",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1039s",
+      "text": "They are completely synthesized, generated by one of these generative models."
+    },
+    {
+      "index": 160,
+      "start": 1045.0,
+      "end": 1057.0,
+      "timestamp": "17:25",
+      "endTimestamp": "17:37",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1045s",
+      "text": "And this is really, diffusion models are really the technology that drives a lot of the text-to-image systems that you might have seen."
+    },
+    {
+      "index": 161,
+      "start": 1057.0,
+      "end": 1069.0,
+      "timestamp": "17:37",
+      "endTimestamp": "17:49",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1057s",
+      "text": "Things like stable diffusion, or DALI, or other, or mid-journey, we think are all based on this type of generative model,"
+    },
+    {
+      "index": 162,
+      "start": 1069.0,
+      "end": 1074.0,
+      "timestamp": "17:49",
+      "endTimestamp": "17:54",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1069s",
+      "text": "this way of representing probability distribution based on a diffusion model."
+    },
+    {
+      "index": 163,
+      "start": 1074.0,
+      "end": 1080.0,
+      "timestamp": "17:54",
+      "endTimestamp": "18:00",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1074s",
+      "text": "And once you have a good diffusion model, you can try to control it using captions."
+    },
+    {
+      "index": 164,
+      "start": 1080.0,
+      "end": 1089.0,
+      "timestamp": "18:00",
+      "endTimestamp": "18:09",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1080s",
+      "text": "And now you get this kind of really cool text-to-image systems where you can ask a user for an input."
+    },
+    {
+      "index": 165,
+      "start": 1089.0,
+      "end": 1095.0,
+      "timestamp": "18:09",
+      "endTimestamp": "18:15",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1089s",
+      "text": "What kind of image do you want? A caption of what kind of image the system should be able to produce."
+    },
+    {
+      "index": 166,
+      "start": 1095.0,
+      "end": 1098.0,
+      "timestamp": "18:15",
+      "endTimestamp": "18:18",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1095s",
+      "text": "For example, an astronaut riding a horse."
+    },
+    {
+      "index": 167,
+      "start": 1098.0,
+      "end": 1104.0,
+      "timestamp": "18:18",
+      "endTimestamp": "18:24",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1098s",
+      "text": "And these are the kind of results that you can get with the systems we have today."
+    },
+    {
+      "index": 168,
+      "start": 1104.0,
+      "end": 1106.0,
+      "timestamp": "18:24",
+      "endTimestamp": "18:26",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1104s",
+      "text": "This is really cool."
+    },
+    {
+      "index": 169,
+      "start": 1106.0,
+      "end": 1110.0,
+      "timestamp": "18:26",
+      "endTimestamp": "18:30",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1106s",
+      "text": "I mean, these models have been trained on a lot of data,"
+    },
+    {
+      "index": 170,
+      "start": 1110.0,
+      "end": 1116.0,
+      "timestamp": "18:30",
+      "endTimestamp": "18:36",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1110s",
+      "text": "but presumably they have not seen something like this on the internet."
+    },
+    {
+      "index": 171,
+      "start": 1116.0,
+      "end": 1119.0,
+      "timestamp": "18:36",
+      "endTimestamp": "18:39",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1116s",
+      "text": "They might have seen an astronaut, they definitely have seen a horse,"
+    },
+    {
+      "index": 172,
+      "start": 1119.0,
+      "end": 1122.0,
+      "timestamp": "18:39",
+      "endTimestamp": "18:42",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1119s",
+      "text": "but they probably have not seen those two things together."
+    },
+    {
+      "index": 173,
+      "start": 1122.0,
+      "end": 1128.0,
+      "timestamp": "18:42",
+      "endTimestamp": "18:48",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1122s",
+      "text": "So it's very impressive that the model is able to, sort of like, again, understand the meaning of astronaut,"
+    },
+    {
+      "index": 174,
+      "start": 1128.0,
+      "end": 1131.0,
+      "timestamp": "18:48",
+      "endTimestamp": "18:51",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1128s",
+      "text": "understand the meaning of horse, putting them together."
+    },
+    {
+      "index": 175,
+      "start": 1131.0,
+      "end": 1139.0,
+      "timestamp": "18:51",
+      "endTimestamp": "18:59",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1131s",
+      "text": "And the fact that it's able to generate this kind of picture tells me that there is some level of understanding of what it means,"
+    },
+    {
+      "index": 176,
+      "start": 1139.0,
+      "end": 1143.0,
+      "timestamp": "18:59",
+      "endTimestamp": "19:03",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1139s",
+      "text": "what an astronaut means, and what riding means, what a horse means."
+    },
+    {
+      "index": 177,
+      "start": 1143.0,
+      "end": 1147.0,
+      "timestamp": "19:03",
+      "endTimestamp": "19:07",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1143s",
+      "text": "And even, like, if you look at the landscape, I don't know, it could be,"
+    },
+    {
+      "index": 178,
+      "start": 1147.0,
+      "end": 1151.0,
+      "timestamp": "19:07",
+      "endTimestamp": "19:11",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1147s",
+      "text": "it feels like it's probably on some other planet or something."
+    },
+    {
+      "index": 179,
+      "start": 1151.0,
+      "end": 1156.0,
+      "timestamp": "19:11",
+      "endTimestamp": "19:16",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1151s",
+      "text": "So there is some level of understanding about these concepts that it's showing here."
+    },
+    {
+      "index": 180,
+      "start": 1156.0,
+      "end": 1163.0,
+      "timestamp": "19:16",
+      "endTimestamp": "19:23",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1156s",
+      "text": "And that's super exciting, I think, because it means that we're really making progress in this space"
+    },
+    {
+      "index": 181,
+      "start": 1163.0,
+      "end": 1166.0,
+      "timestamp": "19:23",
+      "endTimestamp": "19:26",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1163s",
+      "text": "and understanding the meaning of text, of images, that relationship."
+    },
+    {
+      "index": 182,
+      "start": 1166.0,
+      "end": 1173.0,
+      "timestamp": "19:26",
+      "endTimestamp": "19:33",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1166s",
+      "text": "And that's what's driving a lot of the successes that we're seeing in ML these days."
+    },
+    {
+      "index": 183,
+      "start": 1173.0,
+      "end": 1175.0,
+      "timestamp": "19:33",
+      "endTimestamp": "19:35",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1173s",
+      "text": "Here's another example."
+    },
+    {
+      "index": 184,
+      "start": 1175.0,
+      "end": 1181.0,
+      "timestamp": "19:35",
+      "endTimestamp": "19:41",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1175s",
+      "text": "If you ask a system on a perfect Italian meal, you get, here I'm generating multiple samples."
+    },
+    {
+      "index": 185,
+      "start": 1181.0,
+      "end": 1186.0,
+      "timestamp": "19:41",
+      "endTimestamp": "19:46",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1181s",
+      "text": "So, because it's a probability distribution, as you can imagine, you can sample from it."
+    },
+    {
+      "index": 186,
+      "start": 1186.0,
+      "end": 1188.0,
+      "timestamp": "19:46",
+      "endTimestamp": "19:48",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1186s",
+      "text": "And it will generate different answers."
+    },
+    {
+      "index": 187,
+      "start": 1188.0,
+      "end": 1190.0,
+      "timestamp": "19:48",
+      "endTimestamp": "19:50",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1188s",
+      "text": "So the generation is stochastic."
+    },
+    {
+      "index": 188,
+      "start": 1190.0,
+      "end": 1194.0,
+      "timestamp": "19:50",
+      "endTimestamp": "19:54",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1190s",
+      "text": "Different random see it, it will produce different outputs every time."
+    },
+    {
+      "index": 189,
+      "start": 1194.0,
+      "end": 1196.0,
+      "timestamp": "19:54",
+      "endTimestamp": "19:56",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1194s",
+      "text": "I see, we can see four of them."
+    },
+    {
+      "index": 190,
+      "start": 1196.0,
+      "end": 1198.0,
+      "timestamp": "19:56",
+      "endTimestamp": "19:58",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1196s",
+      "text": "Again, I think it does a pretty good job."
+    },
+    {
+      "index": 191,
+      "start": 1198.0,
+      "end": 1205.0,
+      "timestamp": "19:58",
+      "endTimestamp": "20:05",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1198s",
+      "text": "I mean, some of the stuff is clearly made up, but it does, it's interesting how it kind of like even captures out of the window"
+    },
+    {
+      "index": 192,
+      "start": 1205.0,
+      "end": 1213.0,
+      "timestamp": "20:05",
+      "endTimestamp": "20:13",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1205s",
+      "text": "the kind of buildings you would probably see in Italy."
+    },
+    {
+      "index": 193,
+      "start": 1213.0,
+      "end": 1216.0,
+      "timestamp": "20:13",
+      "endTimestamp": "20:16",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1213s",
+      "text": "It kind of like has the right flavor, I think."
+    },
+    {
+      "index": 194,
+      "start": 1216.0,
+      "end": 1219.0,
+      "timestamp": "20:16",
+      "endTimestamp": "20:19",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1216s",
+      "text": "It's pretty impressive kind of thing."
+    },
+    {
+      "index": 195,
+      "start": 1219.0,
+      "end": 1225.0,
+      "timestamp": "20:19",
+      "endTimestamp": "20:25",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1219s",
+      "text": "Here's another example from a recent system developed in China."
+    },
+    {
+      "index": 196,
+      "start": 1225.0,
+      "end": 1232.0,
+      "timestamp": "20:25",
+      "endTimestamp": "20:32",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1225s",
+      "text": "This is a teddy bear wearing a costume, standing in front of the Hall of Supreme Harmony and singing a Beijing opera."
+    },
+    {
+      "index": 197,
+      "start": 1232.0,
+      "end": 1235.0,
+      "timestamp": "20:32",
+      "endTimestamp": "20:35",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1232s",
+      "text": "So again, a pretty crazy sort of caption."
+    },
+    {
+      "index": 198,
+      "start": 1235.0,
+      "end": 1238.0,
+      "timestamp": "20:35",
+      "endTimestamp": "20:38",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1235s",
+      "text": "And it produces things like this."
+    },
+    {
+      "index": 199,
+      "start": 1238.0,
+      "end": 1241.0,
+      "timestamp": "20:38",
+      "endTimestamp": "20:41",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1238s",
+      "text": "Pretty impressive."
+    },
+    {
+      "index": 200,
+      "start": 1245.0,
+      "end": 1250.0,
+      "timestamp": "20:45",
+      "endTimestamp": "20:50",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1245s",
+      "text": "And this is the latest that came out very recently."
+    },
+    {
+      "index": 201,
+      "start": 1250.0,
+      "end": 1253.0,
+      "timestamp": "20:50",
+      "endTimestamp": "20:53",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1250s",
+      "text": "We don't know yet what this model is built on."
+    },
+    {
+      "index": 202,
+      "start": 1253.0,
+      "end": 1257.0,
+      "timestamp": "20:53",
+      "endTimestamp": "20:57",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1253s",
+      "text": "Dali3 from OpenAI, this is an example from their blog post."
+    },
+    {
+      "index": 203,
+      "start": 1257.0,
+      "end": 1261.0,
+      "timestamp": "20:57",
+      "endTimestamp": "21:01",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1257s",
+      "text": "Here you're asking the model to generate."
+    },
+    {
+      "index": 204,
+      "start": 1265.0,
+      "end": 1267.0,
+      "timestamp": "21:05",
+      "endTimestamp": "21:07",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1265s",
+      "text": "Well, you can see the caption yourself."
+    },
+    {
+      "index": 205,
+      "start": 1269.0,
+      "end": 1270.0,
+      "timestamp": "21:09",
+      "endTimestamp": "21:10",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1269s",
+      "text": "Pretty cool."
+    },
+    {
+      "index": 206,
+      "start": 1270.0,
+      "end": 1277.0,
+      "timestamp": "21:10",
+      "endTimestamp": "21:17",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1270s",
+      "text": "Again, demonstrates a pretty sophisticated level of understanding of concepts and a good way of combining them together."
+    },
+    {
+      "index": 207,
+      "start": 1280.0,
+      "end": 1283.0,
+      "timestamp": "21:20",
+      "endTimestamp": "21:23",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1280s",
+      "text": "Right, so this is a test to image generation."
+    },
+    {
+      "index": 208,
+      "start": 1283.0,
+      "end": 1290.0,
+      "timestamp": "21:23",
+      "endTimestamp": "21:30",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1283s",
+      "text": "Again, the nice thing about these models is that you can often control them using different kinds of control signals."
+    },
+    {
+      "index": 209,
+      "start": 1290.0,
+      "end": 1293.0,
+      "timestamp": "21:30",
+      "endTimestamp": "21:33",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1290s",
+      "text": "So here we're controlling using text, using captions."
+    },
+    {
+      "index": 210,
+      "start": 1293.0,
+      "end": 1296.0,
+      "timestamp": "21:33",
+      "endTimestamp": "21:36",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1293s",
+      "text": "But there is a lot of inverse problems."
+    },
+    {
+      "index": 211,
+      "start": 1296.0,
+      "end": 1300.0,
+      "timestamp": "21:36",
+      "endTimestamp": "21:40",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1296s",
+      "text": "Again, this is a field that has been studied for a long time."
+    },
+    {
+      "index": 212,
+      "start": 1300.0,
+      "end": 1307.0,
+      "timestamp": "21:40",
+      "endTimestamp": "21:47",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1300s",
+      "text": "People have been thinking about how to colorize an image, how to do super resolution on an image, how to do in-painting on an image."
+    },
+    {
+      "index": 213,
+      "start": 1307.0,
+      "end": 1320.0,
+      "timestamp": "21:47",
+      "endTimestamp": "22:00",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1307s",
+      "text": "These problems become pretty much easier to solve once you have a good system that really understands the relationship between all the pixel values that you typically see in an image."
+    },
+    {
+      "index": 214,
+      "start": 1321.0,
+      "end": 1326.0,
+      "timestamp": "22:01",
+      "endTimestamp": "22:06",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1321s",
+      "text": "And so there's been a lot of progress in, let's say, super resolution."
+    },
+    {
+      "index": 215,
+      "start": 1326.0,
+      "end": 1330.0,
+      "timestamp": "22:06",
+      "endTimestamp": "22:10",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1326s",
+      "text": "You go from low resolution images like this to high resolution images like that."
+    },
+    {
+      "index": 216,
+      "start": 1330.0,
+      "end": 1331.0,
+      "timestamp": "22:10",
+      "endTimestamp": "22:11",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1330s",
+      "text": "Or colorization."
+    },
+    {
+      "index": 217,
+      "start": 1331.0,
+      "end": 1337.0,
+      "timestamp": "22:11",
+      "endTimestamp": "22:17",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1331s",
+      "text": "You can take old black and white photos and you can kind of like colorize them in a meaningful way."
+    },
+    {
+      "index": 218,
+      "start": 1337.0,
+      "end": 1338.0,
+      "timestamp": "22:17",
+      "endTimestamp": "22:18",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1337s",
+      "text": "Or in-painting."
+    },
+    {
+      "index": 219,
+      "start": 1338.0,
+      "end": 1345.0,
+      "timestamp": "22:18",
+      "endTimestamp": "22:25",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1338s",
+      "text": "So if you have an image where some of the pixels are masked out, you can ask the model to fill them in."
+    },
+    {
+      "index": 220,
+      "start": 1345.0,
+      "end": 1349.0,
+      "timestamp": "22:25",
+      "endTimestamp": "22:29",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1345s",
+      "text": "And they do a pretty good job at doing this."
+    },
+    {
+      "index": 221,
+      "start": 1349.0,
+      "end": 1352.0,
+      "timestamp": "22:29",
+      "endTimestamp": "22:32",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1349s",
+      "text": "These are probably not the most up-to-date references."
+    },
+    {
+      "index": 222,
+      "start": 1352.0,
+      "end": 1358.0,
+      "timestamp": "22:32",
+      "endTimestamp": "22:38",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1352s",
+      "text": "But you can kind of get a sense of why these models are so useful in the real world."
+    },
+    {
+      "index": 223,
+      "start": 1359.0,
+      "end": 1367.0,
+      "timestamp": "22:39",
+      "endTimestamp": "22:47",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1359s",
+      "text": "And here's an example from SDEdit, which is one of the things that, again, one of my PhD students developed."
+    },
+    {
+      "index": 224,
+      "start": 1367.0,
+      "end": 1371.0,
+      "timestamp": "22:47",
+      "endTimestamp": "22:51",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1367s",
+      "text": "This is back to the sketch to image, where you can start with a sketch."
+    },
+    {
+      "index": 225,
+      "start": 1371.0,
+      "end": 1374.0,
+      "timestamp": "22:51",
+      "endTimestamp": "22:54",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1371s",
+      "text": "Sort of like a painting or an image that you would like."
+    },
+    {
+      "index": 226,
+      "start": 1374.0,
+      "end": 1376.0,
+      "timestamp": "22:54",
+      "endTimestamp": "22:56",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1374s",
+      "text": "The kind of thing I would be able to do."
+    },
+    {
+      "index": 227,
+      "start": 1376.0,
+      "end": 1383.0,
+      "timestamp": "22:56",
+      "endTimestamp": "23:03",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1376s",
+      "text": "And then you can ask the model to refine it and produce some pretty picture that kind of like has the right structure."
+    },
+    {
+      "index": 228,
+      "start": 1383.0,
+      "end": 1385.0,
+      "timestamp": "23:03",
+      "endTimestamp": "23:05",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1383s",
+      "text": "But that's much nicer."
+    },
+    {
+      "index": 229,
+      "start": 1385.0,
+      "end": 1388.0,
+      "timestamp": "23:05",
+      "endTimestamp": "23:08",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1385s",
+      "text": "I would never be able to produce the image at the bottom."
+    },
+    {
+      "index": 230,
+      "start": 1388.0,
+      "end": 1391.0,
+      "timestamp": "23:08",
+      "endTimestamp": "23:11",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1388s",
+      "text": "But I could probably come up with a sketch you see on the top."
+    },
+    {
+      "index": 231,
+      "start": 1393.0,
+      "end": 1398.0,
+      "timestamp": "23:13",
+      "endTimestamp": "23:18",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1393s",
+      "text": "And yeah, here you can see more examples where you can do sketch to image."
+    },
+    {
+      "index": 232,
+      "start": 1398.0,
+      "end": 1400.0,
+      "timestamp": "23:18",
+      "endTimestamp": "23:20",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1398s",
+      "text": "Or you can do even stroke-based editing."
+    },
+    {
+      "index": 233,
+      "start": 1400.0,
+      "end": 1409.0,
+      "timestamp": "23:20",
+      "endTimestamp": "23:29",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1400s",
+      "text": "Maybe you start with an image and then you want to change it based on some rough sense of what you want the image to have."
+    },
+    {
+      "index": 234,
+      "start": 1409.0,
+      "end": 1412.0,
+      "timestamp": "23:29",
+      "endTimestamp": "23:32",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1409s",
+      "text": "And then the model will make it pretty for you."
+    },
+    {
+      "index": 235,
+      "start": 1414.0,
+      "end": 1420.0,
+      "timestamp": "23:34",
+      "endTimestamp": "23:40",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1414s",
+      "text": "And it doesn't have to be editing or sort of like you don't have to control it through strokes."
+    },
+    {
+      "index": 236,
+      "start": 1420.0,
+      "end": 1426.0,
+      "timestamp": "23:40",
+      "endTimestamp": "23:46",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1420s",
+      "text": "Another natural way of controlling this kind of editing process is through text."
+    },
+    {
+      "index": 237,
+      "start": 1426.0,
+      "end": 1434.0,
+      "timestamp": "23:46",
+      "endTimestamp": "23:54",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1426s",
+      "text": "So instead of actually drawing what you want, you can ask the model, you can tell the model how you want your images to be edited."
+    },
+    {
+      "index": 238,
+      "start": 1434.0,
+      "end": 1441.0,
+      "timestamp": "23:54",
+      "endTimestamp": "24:01",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1434s",
+      "text": "So you might start with an image of a bird, but now you want to change it so that you want it to spread the wings."
+    },
+    {
+      "index": 239,
+      "start": 1441.0,
+      "end": 1443.0,
+      "timestamp": "24:01",
+      "endTimestamp": "24:03",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1441s",
+      "text": "And you can tell the model how to spread the wings."
+    },
+    {
+      "index": 240,
+      "start": 1443.0,
+      "end": 1446.0,
+      "timestamp": "24:03",
+      "endTimestamp": "24:06",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1443s",
+      "text": "And it's able to do this kind of update."
+    },
+    {
+      "index": 241,
+      "start": 1446.0,
+      "end": 1449.0,
+      "timestamp": "24:06",
+      "endTimestamp": "24:09",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1446s",
+      "text": "Or you have an image with two birds and now you want the birds to be kissing."
+    },
+    {
+      "index": 242,
+      "start": 1449.0,
+      "end": 1452.0,
+      "timestamp": "24:09",
+      "endTimestamp": "24:12",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1449s",
+      "text": "And then this is what you produce."
+    },
+    {
+      "index": 243,
+      "start": 1452.0,
+      "end": 1455.0,
+      "timestamp": "24:12",
+      "endTimestamp": "24:15",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1452s",
+      "text": "Or you have an image with a box and now you want the box to be open."
+    },
+    {
+      "index": 244,
+      "start": 1455.0,
+      "end": 1464.0,
+      "timestamp": "24:15",
+      "endTimestamp": "24:24",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1455s",
+      "text": "And you can kind of see some pretty impressive results in terms of image editing or changing the pose of this dog."
+    },
+    {
+      "index": 245,
+      "start": 1464.0,
+      "end": 1467.0,
+      "timestamp": "24:24",
+      "endTimestamp": "24:27",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1464s",
+      "text": "Or even changing the style of the painting of the image."
+    },
+    {
+      "index": 246,
+      "start": 1467.0,
+      "end": 1472.0,
+      "timestamp": "24:27",
+      "endTimestamp": "24:32",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1467s",
+      "text": "You go from a real image to some kind of like drawings."
+    },
+    {
+      "index": 247,
+      "start": 1472.0,
+      "end": 1474.0,
+      "timestamp": "24:32",
+      "endTimestamp": "24:34",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1472s",
+      "text": "And again, it does a pretty good job."
+    },
+    {
+      "index": 248,
+      "start": 1474.0,
+      "end": 1476.0,
+      "timestamp": "24:34",
+      "endTimestamp": "24:36",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1474s",
+      "text": "You can see it's making some mistakes."
+    },
+    {
+      "index": 249,
+      "start": 1476.0,
+      "end": 1483.0,
+      "timestamp": "24:36",
+      "endTimestamp": "24:43",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1476s",
+      "text": "Like this knife here gets changed in a way that is not quite what we want."
+    },
+    {
+      "index": 250,
+      "start": 1483.0,
+      "end": 1485.0,
+      "timestamp": "24:43",
+      "endTimestamp": "24:45",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1483s",
+      "text": "They are not perfect yet."
+    },
+    {
+      "index": 251,
+      "start": 1485.0,
+      "end": 1487.0,
+      "timestamp": "24:45",
+      "endTimestamp": "24:47",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1485s",
+      "text": "But these capabilities are very impressive."
+    },
+    {
+      "index": 252,
+      "start": 1487.0,
+      "end": 1488.0,
+      "timestamp": "24:47",
+      "endTimestamp": "24:48",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1487s",
+      "text": "Already very useful."
+    },
+    {
+      "index": 253,
+      "start": 1491.0,
+      "end": 1492.0,
+      "timestamp": "24:51",
+      "endTimestamp": "24:52",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1491s",
+      "text": "Cool."
+    },
+    {
+      "index": 254,
+      "start": 1492.0,
+      "end": 1498.0,
+      "timestamp": "24:52",
+      "endTimestamp": "24:58",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1492s",
+      "text": "And yeah, back to the more exotic one that you might not necessarily think fits in this framework."
+    },
+    {
+      "index": 255,
+      "start": 1498.0,
+      "end": 1502.0,
+      "timestamp": "24:58",
+      "endTimestamp": "25:02",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1498s",
+      "text": "Just to give you a sense of how general these ideas are."
+    },
+    {
+      "index": 256,
+      "start": 1502.0,
+      "end": 1512.0,
+      "timestamp": "25:02",
+      "endTimestamp": "25:12",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1502s",
+      "text": "If you have a generative model of medical images, you can use it to essentially improve the way we do medical images."
+    },
+    {
+      "index": 257,
+      "start": 1512.0,
+      "end": 1518.0,
+      "timestamp": "25:12",
+      "endTimestamp": "25:18",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1512s",
+      "text": "In this case, the control signal, it's an actual measurement that you get from, let's say, a CT scan machine."
+    },
+    {
+      "index": 258,
+      "start": 1518.0,
+      "end": 1524.0,
+      "timestamp": "25:18",
+      "endTimestamp": "25:24",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1518s",
+      "text": "And then you can control the generative process using the measurement from the CT scan machine."
+    },
+    {
+      "index": 259,
+      "start": 1524.0,
+      "end": 1528.0,
+      "timestamp": "25:24",
+      "endTimestamp": "25:28",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1524s",
+      "text": "And this can drastically reduce the amount of radiations."
+    },
+    {
+      "index": 260,
+      "start": 1528.0,
+      "end": 1534.0,
+      "timestamp": "25:28",
+      "endTimestamp": "25:34",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1528s",
+      "text": "And the number of measurements that you need to get a crisp kind of image that you can show to the doctor."
+    },
+    {
+      "index": 261,
+      "start": 1534.0,
+      "end": 1536.0,
+      "timestamp": "25:34",
+      "endTimestamp": "25:36",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1534s",
+      "text": "This is very similar to in-painting."
+    },
+    {
+      "index": 262,
+      "start": 1536.0,
+      "end": 1538.0,
+      "timestamp": "25:36",
+      "endTimestamp": "25:38",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1536s",
+      "text": "It's just in-painting in a slightly different space."
+    },
+    {
+      "index": 263,
+      "start": 1538.0,
+      "end": 1540.0,
+      "timestamp": "25:38",
+      "endTimestamp": "25:40",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1538s",
+      "text": "You can kind of get a sense."
+    },
+    {
+      "index": 264,
+      "start": 1540.0,
+      "end": 1542.0,
+      "timestamp": "25:40",
+      "endTimestamp": "25:42",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1540s",
+      "text": "It's roughly the same problem."
+    },
+    {
+      "index": 265,
+      "start": 1542.0,
+      "end": 1549.0,
+      "timestamp": "25:42",
+      "endTimestamp": "25:49",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1542s",
+      "text": "And advances in generative models translate into big improvements in this real-world applications."
+    },
+    {
+      "index": 266,
+      "start": 1549.0,
+      "end": 1553.0,
+      "timestamp": "25:49",
+      "endTimestamp": "25:53",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1549s",
+      "text": "All right."
+    },
+    {
+      "index": 267,
+      "start": 1553.0,
+      "end": 1555.0,
+      "timestamp": "25:53",
+      "endTimestamp": "25:55",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1553s",
+      "text": "Now, moving on to different modalities."
+    },
+    {
+      "index": 268,
+      "start": 1555.0,
+      "end": 1563.0,
+      "timestamp": "25:55",
+      "endTimestamp": "26:03",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1555s",
+      "text": "Speech audio has been another modality where people have been able to build some pretty good generative models."
+    },
+    {
+      "index": 269,
+      "start": 1563.0,
+      "end": 1567.0,
+      "timestamp": "26:03",
+      "endTimestamp": "26:07",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1563s",
+      "text": "This is one of the earliest ones."
+    },
+    {
+      "index": 270,
+      "start": 1567.0,
+      "end": 1570.0,
+      "timestamp": "26:07",
+      "endTimestamp": "26:10",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1567s",
+      "text": "The WaveNet model back, I think it was 2016."
+    },
+    {
+      "index": 271,
+      "start": 1570.0,
+      "end": 1576.0,
+      "timestamp": "26:10",
+      "endTimestamp": "26:16",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1570s",
+      "text": "And you can kind of see some examples of, let's hope this works."
+    },
+    {
+      "index": 272,
+      "start": 1576.0,
+      "end": 1579.0,
+      "timestamp": "26:16",
+      "endTimestamp": "26:19",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1576s",
+      "text": "This is an example."
+    },
+    {
+      "index": 273,
+      "start": 1582.0,
+      "end": 1585.0,
+      "timestamp": "26:22",
+      "endTimestamp": "26:25",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1582s",
+      "text": "This is kind of like the pre-deep learning thing."
+    },
+    {
+      "index": 274,
+      "start": 1585.0,
+      "end": 1588.0,
+      "timestamp": "26:25",
+      "endTimestamp": "26:28",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1585s",
+      "text": "And these are not great text-to-speech."
+    },
+    {
+      "index": 275,
+      "start": 1588.0,
+      "end": 1593.0,
+      "timestamp": "26:28",
+      "endTimestamp": "26:33",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1588s",
+      "text": "The Blue Lagoon is a 1980 American romance and adventure film directed by Randall Kleiser."
+    },
+    {
+      "index": 276,
+      "start": 1593.0,
+      "end": 1598.0,
+      "timestamp": "26:33",
+      "endTimestamp": "26:38",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1593s",
+      "text": "And then the WaveNet model, which is a deep learning-based model for text-to-speech."
+    },
+    {
+      "index": 277,
+      "start": 1598.0,
+      "end": 1600.0,
+      "timestamp": "26:38",
+      "endTimestamp": "26:40",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1598s",
+      "text": "You're going to see it's significantly better."
+    },
+    {
+      "index": 278,
+      "start": 1600.0,
+      "end": 1605.0,
+      "timestamp": "26:40",
+      "endTimestamp": "26:45",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1600s",
+      "text": "The Blue Lagoon is a 1980 American romance and adventure film directed by Randall Kleiser."
+    },
+    {
+      "index": 279,
+      "start": 1605.0,
+      "end": 1612.0,
+      "timestamp": "26:45",
+      "endTimestamp": "26:52",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1605s",
+      "text": "And these are maybe the latest ones that are based on diffusion models again."
+    },
+    {
+      "index": 280,
+      "start": 1612.0,
+      "end": 1617.0,
+      "timestamp": "26:52",
+      "endTimestamp": "26:57",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1612s",
+      "text": "So this is, well, this is a combination of diffusion models and autoregressive models."
+    },
+    {
+      "index": 281,
+      "start": 1617.0,
+      "end": 1620.0,
+      "timestamp": "26:57",
+      "endTimestamp": "27:00",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1617s",
+      "text": "But here you can see some of the 2023 stuff."
+    },
+    {
+      "index": 282,
+      "start": 1620.0,
+      "end": 1628.0,
+      "timestamp": "27:00",
+      "endTimestamp": "27:08",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1620s",
+      "text": "Once you have the first token, you want to predict the second token given the input and the first token using multi-head attention."
+    },
+    {
+      "index": 283,
+      "start": 1628.0,
+      "end": 1631.0,
+      "timestamp": "27:08",
+      "endTimestamp": "27:11",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1628s",
+      "text": "You can see it's much more realistic."
+    },
+    {
+      "index": 284,
+      "start": 1631.0,
+      "end": 1634.0,
+      "timestamp": "27:11",
+      "endTimestamp": "27:14",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1631s",
+      "text": "There is a little bit of an accent here."
+    },
+    {
+      "index": 285,
+      "start": 1634.0,
+      "end": 1641.0,
+      "timestamp": "27:14",
+      "endTimestamp": "27:21",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1634s",
+      "text": "There is a little bit of emotions that are, it feels a lot less robotic, a lot less fake."
+    },
+    {
+      "index": 286,
+      "start": 1641.0,
+      "end": 1643.0,
+      "timestamp": "27:21",
+      "endTimestamp": "27:23",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1641s",
+      "text": "Here's another example."
+    },
+    {
+      "index": 287,
+      "start": 1643.0,
+      "end": 1645.0,
+      "timestamp": "27:23",
+      "endTimestamp": "27:25",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1643s",
+      "text": "This is text-to-speech."
+    },
+    {
+      "index": 288,
+      "start": 1645.0,
+      "end": 1650.0,
+      "timestamp": "27:25",
+      "endTimestamp": "27:30",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1645s",
+      "text": "You input a text and you produce the speech corresponding to that text."
+    },
+    {
+      "index": 289,
+      "start": 1650.0,
+      "end": 1653.0,
+      "timestamp": "27:30",
+      "endTimestamp": "27:33",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1650s",
+      "text": "CS-236 is the best class at Stanford."
+    },
+    {
+      "index": 290,
+      "start": 1653.0,
+      "end": 1656.0,
+      "timestamp": "27:33",
+      "endTimestamp": "27:36",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1653s",
+      "text": "So this is another example."
+    },
+    {
+      "index": 291,
+      "start": 1656.0,
+      "end": 1662.0,
+      "timestamp": "27:36",
+      "endTimestamp": "27:42",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1656s",
+      "text": "And again, you can sort of like use these things to solve inverse problems."
+    },
+    {
+      "index": 292,
+      "start": 1662.0,
+      "end": 1665.0,
+      "timestamp": "27:42",
+      "endTimestamp": "27:45",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1662s",
+      "text": "So you can do super resolution in the audio space."
+    },
+    {
+      "index": 293,
+      "start": 1665.0,
+      "end": 1673.0,
+      "timestamp": "27:45",
+      "endTimestamp": "27:53",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1665s",
+      "text": "So you can condition on the kind of like a low quality signal, the kind of thing you can get maybe on phones."
+    },
+    {
+      "index": 294,
+      "start": 1673.0,
+      "end": 1677.0,
+      "timestamp": "27:53",
+      "endTimestamp": "27:57",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1673s",
+      "text": "One is investment, one is reform."
+    },
+    {
+      "index": 295,
+      "start": 1677.0,
+      "end": 1679.0,
+      "timestamp": "27:57",
+      "endTimestamp": "27:59",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1677s",
+      "text": "And then you can super resolve it."
+    },
+    {
+      "index": 296,
+      "start": 1679.0,
+      "end": 1682.0,
+      "timestamp": "27:59",
+      "endTimestamp": "28:02",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1679s",
+      "text": "One is investment, one is reform."
+    },
+    {
+      "index": 297,
+      "start": 1682.0,
+      "end": 1685.0,
+      "timestamp": "28:02",
+      "endTimestamp": "28:05",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1682s",
+      "text": "Again, this is the same problem as basically in painting."
+    },
+    {
+      "index": 298,
+      "start": 1685.0,
+      "end": 1690.0,
+      "timestamp": "28:05",
+      "endTimestamp": "28:10",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1685s",
+      "text": "Like you're missing some pixels, you're missing some frequencies, and you can ask the model to make them up for you."
+    },
+    {
+      "index": 299,
+      "start": 1690.0,
+      "end": 1698.0,
+      "timestamp": "28:10",
+      "endTimestamp": "28:18",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1690s",
+      "text": "And to the extent that it understands the relationship between these values, which you can also kind of think of as images,"
+    },
+    {
+      "index": 300,
+      "start": 1698.0,
+      "end": 1701.0,
+      "timestamp": "28:18",
+      "endTimestamp": "28:21",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1698s",
+      "text": "it can do a pretty good job of super resolving audio."
+    },
+    {
+      "index": 301,
+      "start": 1704.0,
+      "end": 1713.0,
+      "timestamp": "28:24",
+      "endTimestamp": "28:33",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1704s",
+      "text": "Language, of course, that's another space where there's been a lot of progress and a lot of excitement around large language models."
+    },
+    {
+      "index": 302,
+      "start": 1713.0,
+      "end": 1723.0,
+      "timestamp": "28:33",
+      "endTimestamp": "28:43",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1713s",
+      "text": "These are basically models that have been trained over large quantities of text collected on the internet often."
+    },
+    {
+      "index": 303,
+      "start": 1723.0,
+      "end": 1728.0,
+      "timestamp": "28:43",
+      "endTimestamp": "28:48",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1723s",
+      "text": "And then they learn a probability distribution over which sentences make sense or not."
+    },
+    {
+      "index": 304,
+      "start": 1728.0,
+      "end": 1738.0,
+      "timestamp": "28:48",
+      "endTimestamp": "28:58",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1728s",
+      "text": "And you can use it to, again, do some sort of in-painting where you can ask the model to create a sentence that starts with some kind of prompt."
+    },
+    {
+      "index": 305,
+      "start": 1738.0,
+      "end": 1751.0,
+      "timestamp": "28:58",
+      "endTimestamp": "29:11",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1738s",
+      "text": "For example, this was an old language model, I guess in 2019, I think, where you can ask the model to continue a sentence that starts with"
+    },
+    {
+      "index": 306,
+      "start": 1751.0,
+      "end": 1754.0,
+      "timestamp": "29:11",
+      "endTimestamp": "29:14",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1751s",
+      "text": "to get an A-plus in deep generative models."
+    },
+    {
+      "index": 307,
+      "start": 1754.0,
+      "end": 1756.0,
+      "timestamp": "29:14",
+      "endTimestamp": "29:16",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1754s",
+      "text": "Students have to."
+    },
+    {
+      "index": 308,
+      "start": 1756.0,
+      "end": 1759.0,
+      "timestamp": "29:16",
+      "endTimestamp": "29:19",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1756s",
+      "text": "And then let's see what the language model does."
+    },
+    {
+      "index": 309,
+      "start": 1759.0,
+      "end": 1761.0,
+      "timestamp": "29:19",
+      "endTimestamp": "29:21",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1759s",
+      "text": "And then it completes it for you, right?"
+    },
+    {
+      "index": 310,
+      "start": 1761.0,
+      "end": 1764.0,
+      "timestamp": "29:21",
+      "endTimestamp": "29:24",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1761s",
+      "text": "And then it says, it's not so much reasonable."
+    },
+    {
+      "index": 311,
+      "start": 1764.0,
+      "end": 1768.0,
+      "timestamp": "29:24",
+      "endTimestamp": "29:28",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1764s",
+      "text": "We have to be willing to work with problems that are all more interesting."
+    },
+    {
+      "index": 312,
+      "start": 1768.0,
+      "end": 1773.0,
+      "timestamp": "29:28",
+      "endTimestamp": "29:33",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1768s",
+      "text": "The past, you know, not great, not perfect for today's standards."
+    },
+    {
+      "index": 313,
+      "start": 1773.0,
+      "end": 1783.0,
+      "timestamp": "29:33",
+      "endTimestamp": "29:43",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1773s",
+      "text": "But again, for when this thing came out, it was pretty mind-blowing that you could build a model that can generate this quality of text."
+    },
+    {
+      "index": 314,
+      "start": 1783.0,
+      "end": 1788.0,
+      "timestamp": "29:43",
+      "endTimestamp": "29:48",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1783s",
+      "text": "Now, I tried something similar on ChatGPT."
+    },
+    {
+      "index": 315,
+      "start": 1788.0,
+      "end": 1790.0,
+      "timestamp": "29:48",
+      "endTimestamp": "29:50",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1788s",
+      "text": "And this time I tried something harder."
+    },
+    {
+      "index": 316,
+      "start": 1790.0,
+      "end": 1794.0,
+      "timestamp": "29:50",
+      "endTimestamp": "29:54",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1790s",
+      "text": "Like here I said to get an A-plus in deep generative models."
+    },
+    {
+      "index": 317,
+      "start": 1794.0,
+      "end": 1799.0,
+      "timestamp": "29:54",
+      "endTimestamp": "29:59",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1794s",
+      "text": "Here I tried what should I do to get an A-plus in CS236 at Stanford."
+    },
+    {
+      "index": 318,
+      "start": 1799.0,
+      "end": 1804.0,
+      "timestamp": "29:59",
+      "endTimestamp": "30:04",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1799s",
+      "text": "So I didn't even tell the model ChatGPT what CS236 is."
+    },
+    {
+      "index": 319,
+      "start": 1804.0,
+      "end": 1809.0,
+      "timestamp": "30:04",
+      "endTimestamp": "30:09",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1804s",
+      "text": "It actually knows that CS236 is deep generative models."
+    },
+    {
+      "index": 320,
+      "start": 1809.0,
+      "end": 1814.0,
+      "timestamp": "30:09",
+      "endTimestamp": "30:14",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1809s",
+      "text": "And here it gives you some actually pretty good tips on how to do well in the class."
+    },
+    {
+      "index": 321,
+      "start": 1814.0,
+      "end": 1821.0,
+      "timestamp": "30:14",
+      "endTimestamp": "30:21",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1814s",
+      "text": "Attend lectures, read the materials, stay organized, seek help, do the homeworks."
+    },
+    {
+      "index": 322,
+      "start": 1821.0,
+      "end": 1823.0,
+      "timestamp": "30:21",
+      "endTimestamp": "30:23",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1821s",
+      "text": "Then it gives you 15 of them."
+    },
+    {
+      "index": 323,
+      "start": 1823.0,
+      "end": 1825.0,
+      "timestamp": "30:23",
+      "endTimestamp": "30:25",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1823s",
+      "text": "I cut the prompt here."
+    },
+    {
+      "index": 324,
+      "start": 1825.0,
+      "end": 1832.0,
+      "timestamp": "30:25",
+      "endTimestamp": "30:32",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1825s",
+      "text": "But, you know, it's pretty impressive that you can do these kind of things."
+    },
+    {
+      "index": 325,
+      "start": 1832.0,
+      "end": 1837.0,
+      "timestamp": "30:32",
+      "endTimestamp": "30:37",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1832s",
+      "text": "And again, it probably means that there is some level of understanding."
+    },
+    {
+      "index": 326,
+      "start": 1837.0,
+      "end": 1843.0,
+      "timestamp": "30:37",
+      "endTimestamp": "30:43",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1837s",
+      "text": "And that's why these models are so powerful when people are using them for doing all sorts of things."
+    },
+    {
+      "index": 327,
+      "start": 1843.0,
+      "end": 1844.0,
+      "timestamp": "30:43",
+      "endTimestamp": "30:44",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1843s",
+      "text": "Because they can generate."
+    },
+    {
+      "index": 328,
+      "start": 1844.0,
+      "end": 1846.0,
+      "timestamp": "30:44",
+      "endTimestamp": "30:46",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1844s",
+      "text": "It means they understand something."
+    },
+    {
+      "index": 329,
+      "start": 1846.0,
+      "end": 1851.0,
+      "timestamp": "30:46",
+      "endTimestamp": "30:51",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1846s",
+      "text": "And then you can use the knowledge to solve a variety of tasks that we care about."
+    },
+    {
+      "index": 330,
+      "start": 1851.0,
+      "end": 1862.0,
+      "timestamp": "30:51",
+      "endTimestamp": "31:02",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1851s",
+      "text": "Of course, the nice thing about this space is that you can often mix and match."
+    },
+    {
+      "index": 331,
+      "start": 1862.0,
+      "end": 1869.0,
+      "timestamp": "31:02",
+      "endTimestamp": "31:09",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1862s",
+      "text": "And so you can kind of control these models using various sorts of control signals."
+    },
+    {
+      "index": 332,
+      "start": 1869.0,
+      "end": 1875.0,
+      "timestamp": "31:09",
+      "endTimestamp": "31:15",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1869s",
+      "text": "Once you can do generation, you can steer the generative process using different control signals."
+    },
+    {
+      "index": 333,
+      "start": 1875.0,
+      "end": 1883.0,
+      "timestamp": "31:15",
+      "endTimestamp": "31:23",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1875s",
+      "text": "A natural one here would be generate text in English conditioned on some text in a different language."
+    },
+    {
+      "index": 334,
+      "start": 1883.0,
+      "end": 1885.0,
+      "timestamp": "31:23",
+      "endTimestamp": "31:25",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1883s",
+      "text": "So maybe Chinese."
+    },
+    {
+      "index": 335,
+      "start": 1885.0,
+      "end": 1890.0,
+      "timestamp": "31:25",
+      "endTimestamp": "31:30",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1885s",
+      "text": "So you have, and this basically is machine translation, right?"
+    },
+    {
+      "index": 336,
+      "start": 1890.0,
+      "end": 1892.0,
+      "timestamp": "31:30",
+      "endTimestamp": "31:32",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1890s",
+      "text": "So progress is in generative models."
+    },
+    {
+      "index": 337,
+      "start": 1892.0,
+      "end": 1896.0,
+      "timestamp": "31:32",
+      "endTimestamp": "31:36",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1892s",
+      "text": "Basically directly translated to progress in machine translation."
+    },
+    {
+      "index": 338,
+      "start": 1896.0,
+      "end": 1901.0,
+      "timestamp": "31:36",
+      "endTimestamp": "31:41",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1896s",
+      "text": "If you have a model that really understands how to generate text in English,"
+    },
+    {
+      "index": 339,
+      "start": 1901.0,
+      "end": 1905.0,
+      "timestamp": "31:41",
+      "endTimestamp": "31:45",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1901s",
+      "text": "then it can take advantage of the control signal well."
+    },
+    {
+      "index": 340,
+      "start": 1905.0,
+      "end": 1910.0,
+      "timestamp": "31:45",
+      "endTimestamp": "31:50",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1905s",
+      "text": "Then it means that essentially it's able to do the retranslation reasonably well."
+    },
+    {
+      "index": 341,
+      "start": 1910.0,
+      "end": 1916.0,
+      "timestamp": "31:50",
+      "endTimestamp": "31:56",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1910s",
+      "text": "And a lot of the progress in terms of like the models and the architectures that we're going to talk about in this class"
+    },
+    {
+      "index": 342,
+      "start": 1916.0,
+      "end": 1923.0,
+      "timestamp": "31:56",
+      "endTimestamp": "32:03",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1916s",
+      "text": "are the kind of ideas that are behind the pretty good machine translation systems that we have today."
+    },
+    {
+      "index": 343,
+      "start": 1923.0,
+      "end": 1928.0,
+      "timestamp": "32:03",
+      "endTimestamp": "32:08",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1923s",
+      "text": "Another example is code."
+    },
+    {
+      "index": 344,
+      "start": 1928.0,
+      "end": 1931.0,
+      "timestamp": "32:08",
+      "endTimestamp": "32:11",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1928s",
+      "text": "Of course, very exciting as it's computer science."
+    },
+    {
+      "index": 345,
+      "start": 1931.0,
+      "end": 1934.0,
+      "timestamp": "32:11",
+      "endTimestamp": "32:14",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1931s",
+      "text": "Many of you are computer scientists, so write a lot of code."
+    },
+    {
+      "index": 346,
+      "start": 1934.0,
+      "end": 1937.0,
+      "timestamp": "32:14",
+      "endTimestamp": "32:17",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1934s",
+      "text": "At the end of the day, code is text."
+    },
+    {
+      "index": 347,
+      "start": 1937.0,
+      "end": 1944.0,
+      "timestamp": "32:17",
+      "endTimestamp": "32:24",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1937s",
+      "text": "If you have a model that understands which sequences of text make sense and which ones don't,"
+    },
+    {
+      "index": 348,
+      "start": 1944.0,
+      "end": 1947.0,
+      "timestamp": "32:24",
+      "endTimestamp": "32:27",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1944s",
+      "text": "you can use it to write code for you."
+    },
+    {
+      "index": 349,
+      "start": 1947.0,
+      "end": 1953.0,
+      "timestamp": "32:27",
+      "endTimestamp": "32:33",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1947s",
+      "text": "So here's an example of a system that exists today where you're kind of like creating a code."
+    },
+    {
+      "index": 350,
+      "start": 1953.0,
+      "end": 1962.0,
+      "timestamp": "32:33",
+      "endTimestamp": "32:42",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1953s",
+      "text": "You can try to get the model to autocomplete, let's say, the body of a function based on some description of what the function is supposed to do."
+    },
+    {
+      "index": 351,
+      "start": 1962.0,
+      "end": 1969.0,
+      "timestamp": "32:42",
+      "endTimestamp": "32:49",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1962s",
+      "text": "Again, these systems are not perfect, but they are already pretty good."
+    },
+    {
+      "index": 352,
+      "start": 1969.0,
+      "end": 1974.0,
+      "timestamp": "32:49",
+      "endTimestamp": "32:54",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1969s",
+      "text": "They can solve many interesting tasks."
+    },
+    {
+      "index": 353,
+      "start": 1974.0,
+      "end": 1979.0,
+      "timestamp": "32:54",
+      "endTimestamp": "32:59",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1974s",
+      "text": "They can solve programming assignments."
+    },
+    {
+      "index": 354,
+      "start": 1979.0,
+      "end": 1981.0,
+      "timestamp": "32:59",
+      "endTimestamp": "33:01",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1979s",
+      "text": "They can solve competition."
+    },
+    {
+      "index": 355,
+      "start": 1981.0,
+      "end": 1987.0,
+      "timestamp": "33:01",
+      "endTimestamp": "33:07",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1981s",
+      "text": "They do reasonably well in competitive programming competitions."
+    },
+    {
+      "index": 356,
+      "start": 1987.0,
+      "end": 1993.0,
+      "timestamp": "33:07",
+      "endTimestamp": "33:13",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1987s",
+      "text": "So, again, pretty cool that they understand the natural language."
+    },
+    {
+      "index": 357,
+      "start": 1993.0,
+      "end": 1995.0,
+      "timestamp": "33:13",
+      "endTimestamp": "33:15",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1993s",
+      "text": "They understand the syntax of the programming language."
+    },
+    {
+      "index": 358,
+      "start": 1995.0,
+      "end": 1999.0,
+      "timestamp": "33:15",
+      "endTimestamp": "33:19",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1995s",
+      "text": "They know how to put things together so that they do the right thing."
+    },
+    {
+      "index": 359,
+      "start": 1999.0,
+      "end": 2003.0,
+      "timestamp": "33:19",
+      "endTimestamp": "33:23",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=1999s",
+      "text": "They're sort of able to translate, in this case, from natural language to a formal language,"
+    },
+    {
+      "index": 360,
+      "start": 2003.0,
+      "end": 2008.0,
+      "timestamp": "33:23",
+      "endTimestamp": "33:28",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2003s",
+      "text": "and Python in this case, and do the right thing."
+    },
+    {
+      "index": 361,
+      "start": 2008.0,
+      "end": 2016.0,
+      "timestamp": "33:28",
+      "endTimestamp": "33:36",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2008s",
+      "text": "So lots of excitement also around these sort of models."
+    },
+    {
+      "index": 362,
+      "start": 2016.0,
+      "end": 2019.0,
+      "timestamp": "33:36",
+      "endTimestamp": "33:39",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2016s",
+      "text": "Another one that is pretty cool is video."
+    },
+    {
+      "index": 363,
+      "start": 2019.0,
+      "end": 2025.0,
+      "timestamp": "33:39",
+      "endTimestamp": "33:45",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2019s",
+      "text": "This is one of the active ones where the first systems are being built."
+    },
+    {
+      "index": 364,
+      "start": 2025.0,
+      "end": 2033.0,
+      "timestamp": "33:45",
+      "endTimestamp": "33:53",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2025s",
+      "text": "Again, you can imagine a variety of different interfaces where you can control the generative process through many different things."
+    },
+    {
+      "index": 365,
+      "start": 2033.0,
+      "end": 2035.0,
+      "timestamp": "33:53",
+      "endTimestamp": "33:55",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2033s",
+      "text": "A natural one is text."
+    },
+    {
+      "index": 366,
+      "start": 2035.0,
+      "end": 2047.0,
+      "timestamp": "33:55",
+      "endTimestamp": "34:07",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2035s",
+      "text": "You might say you start with a caption, and then you ask the model to generate a video corresponding to that caption."
+    },
+    {
+      "index": 367,
+      "start": 2047.0,
+      "end": 2049.0,
+      "timestamp": "34:07",
+      "endTimestamp": "34:09",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2047s",
+      "text": "This is one example."
+    },
+    {
+      "index": 368,
+      "start": 2049.0,
+      "end": 2051.0,
+      "timestamp": "34:09",
+      "endTimestamp": "34:11",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2049s",
+      "text": "The videos are pretty short right now."
+    },
+    {
+      "index": 369,
+      "start": 2051.0,
+      "end": 2053.0,
+      "timestamp": "34:11",
+      "endTimestamp": "34:13",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2051s",
+      "text": "That's one of the limitations."
+    },
+    {
+      "index": 370,
+      "start": 2053.0,
+      "end": 2056.0,
+      "timestamp": "34:13",
+      "endTimestamp": "34:16",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2053s",
+      "text": "But can you see it?"
+    },
+    {
+      "index": 371,
+      "start": 2056.0,
+      "end": 2058.0,
+      "timestamp": "34:16",
+      "endTimestamp": "34:18",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2056s",
+      "text": "Oh, yeah, it shows up there."
+    },
+    {
+      "index": 372,
+      "start": 2058.0,
+      "end": 2061.0,
+      "timestamp": "34:18",
+      "endTimestamp": "34:21",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2058s",
+      "text": "Here's another example."
+    },
+    {
+      "index": 373,
+      "start": 2061.0,
+      "end": 2070.0,
+      "timestamp": "34:21",
+      "endTimestamp": "34:30",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2061s",
+      "text": "Here they're asking it to generate a video of a couple sledding down a snowy hill on the Roman Church's style."
+    },
+    {
+      "index": 374,
+      "start": 2070.0,
+      "end": 2074.0,
+      "timestamp": "34:30",
+      "endTimestamp": "34:34",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2070s",
+      "text": "And this is sort of like what it produces."
+    },
+    {
+      "index": 375,
+      "start": 2074.0,
+      "end": 2077.0,
+      "timestamp": "34:34",
+      "endTimestamp": "34:37",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2074s",
+      "text": "Pretty short videos."
+    },
+    {
+      "index": 376,
+      "start": 2077.0,
+      "end": 2081.0,
+      "timestamp": "34:37",
+      "endTimestamp": "34:41",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2077s",
+      "text": "At the end of the day, you kind of think of a video as a sequence of images."
+    },
+    {
+      "index": 377,
+      "start": 2081.0,
+      "end": 2089.0,
+      "timestamp": "34:41",
+      "endTimestamp": "34:49",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2081s",
+      "text": "So if you can generate images, it's believable that you can also generate a stack of images, which is essentially a video."
+    },
+    {
+      "index": 378,
+      "start": 2089.0,
+      "end": 2091.0,
+      "timestamp": "34:49",
+      "endTimestamp": "34:51",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2089s",
+      "text": "Pretty impressive."
+    },
+    {
+      "index": 379,
+      "start": 2091.0,
+      "end": 2095.0,
+      "timestamp": "34:51",
+      "endTimestamp": "34:55",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2091s",
+      "text": "There's a good amount of coherence across the frames."
+    },
+    {
+      "index": 380,
+      "start": 2095.0,
+      "end": 2098.0,
+      "timestamp": "34:55",
+      "endTimestamp": "34:58",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2095s",
+      "text": "It captures roughly what's asked by the user."
+    },
+    {
+      "index": 381,
+      "start": 2098.0,
+      "end": 2101.0,
+      "timestamp": "34:58",
+      "endTimestamp": "35:01",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2098s",
+      "text": "And the quality is pretty high."
+    },
+    {
+      "index": 382,
+      "start": 2101.0,
+      "end": 2109.0,
+      "timestamp": "35:01",
+      "endTimestamp": "35:09",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2101s",
+      "text": "And if you're willing to work on this and stitch together many different videos, you can generate some pretty cool stuff."
+    },
+    {
+      "index": 383,
+      "start": 2109.0,
+      "end": 2111.0,
+      "timestamp": "35:09",
+      "endTimestamp": "35:11",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2109s",
+      "text": "That's the example."
+    },
+    {
+      "index": 384,
+      "start": 2111.0,
+      "end": 2112.0,
+      "timestamp": "35:11",
+      "endTimestamp": "35:12",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2111s",
+      "text": "That's the example."
+    },
+    {
+      "index": 385,
+      "start": 2112.0,
+      "end": 2114.0,
+      "timestamp": "35:12",
+      "endTimestamp": "35:14",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2112s",
+      "text": "That's the example."
+    },
+    {
+      "index": 386,
+      "start": 2114.0,
+      "end": 2117.0,
+      "timestamp": "35:14",
+      "endTimestamp": "35:17",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2114s",
+      "text": "languages."
+    },
+    {
+      "index": 387,
+      "start": 2120.0,
+      "end": 2122.0,
+      "timestamp": "35:20",
+      "endTimestamp": "35:22",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2120s",
+      "text": "l"
+    },
+    {
+      "index": 388,
+      "start": 2144.0,
+      "end": 2154.3,
+      "timestamp": "35:44",
+      "endTimestamp": "35:54",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2144s",
+      "text": "This is just basically stitching together a bunch of videos generated with the previous system."
+    },
+    {
+      "index": 389,
+      "start": 2155.44,
+      "end": 2162.0,
+      "timestamp": "35:55",
+      "endTimestamp": "36:02",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2155s",
+      "text": "And, you know, again, you can see it's not perfect, but it's remarkable."
+    },
+    {
+      "index": 390,
+      "start": 2162.3,
+      "end": 2167.74,
+      "timestamp": "36:02",
+      "endTimestamp": "36:08",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2162s",
+      "text": "I mean, we're not at the level where you can just ask the system to produce a movie for you"
+    },
+    {
+      "index": 391,
+      "start": 2167.74,
+      "end": 2171.12,
+      "timestamp": "36:08",
+      "endTimestamp": "36:11",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2167s",
+      "text": "with a certain plot or whatever, with your favorite actor,"
+    },
+    {
+      "index": 392,
+      "start": 2171.12,
+      "end": 2177.6,
+      "timestamp": "36:11",
+      "endTimestamp": "36:18",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2171s",
+      "text": "but it's already able to produce pretty high-quality content that people are willing to look at and engage with."
+    },
+    {
+      "index": 393,
+      "start": 2178.2999999999997,
+      "end": 2183.7,
+      "timestamp": "36:18",
+      "endTimestamp": "36:24",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2178s",
+      "text": "So that's an exciting kind of development that we're seeing in generative models of videos."
+    },
+    {
+      "index": 394,
+      "start": 2183.8199999999997,
+      "end": 2189.52,
+      "timestamp": "36:24",
+      "endTimestamp": "36:30",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2183s",
+      "text": "I think when that starts to work, and we're seeing the kind of progress in this space that I showed you before for images,"
+    },
+    {
+      "index": 395,
+      "start": 2189.98,
+      "end": 2191.2,
+      "timestamp": "36:30",
+      "endTimestamp": "36:31",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2189s",
+      "text": "it's happening right now."
+    },
+    {
+      "index": 396,
+      "start": 2191.46,
+      "end": 2197.2999999999997,
+      "timestamp": "36:31",
+      "endTimestamp": "36:37",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2191s",
+      "text": "I think when people figure this out and get really good systems, they can generate long videos of high quality."
+    },
+    {
+      "index": 397,
+      "start": 2197.3,
+      "end": 2208.5800000000004,
+      "timestamp": "36:37",
+      "endTimestamp": "36:49",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2197s",
+      "text": "This could be really changing the way we, you know, a lot of the media industry is going to have to pay attention to this."
+    },
+    {
+      "index": 398,
+      "start": 2210.96,
+      "end": 2211.78,
+      "timestamp": "36:51",
+      "endTimestamp": "36:52",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2210s",
+      "text": "Question? Yeah."
+    },
+    {
+      "index": 399,
+      "start": 2212.52,
+      "end": 2212.7000000000003,
+      "timestamp": "36:53",
+      "endTimestamp": "36:53",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2212s",
+      "text": "Yeah."
+    },
+    {
+      "index": 400,
+      "start": 2212.7000000000003,
+      "end": 2213.0800000000004,
+      "timestamp": "36:53",
+      "endTimestamp": "36:53",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2212s",
+      "text": "Yeah."
+    },
+    {
+      "index": 401,
+      "start": 2213.0800000000004,
+      "end": 2213.7000000000003,
+      "timestamp": "36:53",
+      "endTimestamp": "36:54",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2213s",
+      "text": "Yeah."
+    },
+    {
+      "index": 402,
+      "start": 2213.7,
+      "end": 2215.22,
+      "timestamp": "36:54",
+      "endTimestamp": "36:55",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2213s",
+      "text": "Yeah."
+    },
+    {
+      "index": 403,
+      "start": 2215.22,
+      "end": 2229.04,
+      "timestamp": "36:55",
+      "endTimestamp": "37:09",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2215s",
+      "text": "I feel like you have to give some intentings, like, you know, some hand sketches, because nowadays I would say this is the most impressive video generation."
+    },
+    {
+      "index": 404,
+      "start": 2229.4199999999996,
+      "end": 2230.6,
+      "timestamp": "37:09",
+      "endTimestamp": "37:11",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2229s",
+      "text": "Video ever, ever saying so."
+    },
+    {
+      "index": 405,
+      "start": 2230.8799999999997,
+      "end": 2232.08,
+      "timestamp": "37:11",
+      "endTimestamp": "37:12",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2230s",
+      "text": "Because I would keep following this."
+    },
+    {
+      "index": 406,
+      "start": 2232.3599999999997,
+      "end": 2235.0,
+      "timestamp": "37:12",
+      "endTimestamp": "37:15",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2232s",
+      "text": "So it's, I mean, these ones are generated purely from the caption."
+    },
+    {
+      "index": 407,
+      "start": 2235.3399999999997,
+      "end": 2235.58,
+      "timestamp": "37:15",
+      "endTimestamp": "37:16",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2235s",
+      "text": "Okay."
+    },
+    {
+      "index": 408,
+      "start": 2235.58,
+      "end": 2239.68,
+      "timestamp": "37:16",
+      "endTimestamp": "37:20",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2235s",
+      "text": "This one, I don't know exactly what went into this."
+    },
+    {
+      "index": 409,
+      "start": 2240.06,
+      "end": 2241.1,
+      "timestamp": "37:20",
+      "endTimestamp": "37:21",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2240s",
+      "text": "I didn't make it myself."
+    },
+    {
+      "index": 410,
+      "start": 2242.06,
+      "end": 2249.68,
+      "timestamp": "37:22",
+      "endTimestamp": "37:30",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2242s",
+      "text": "But I know the system allows you to also control it through a caption and a seed image."
+    },
+    {
+      "index": 411,
+      "start": 2250.4,
+      "end": 2259.02,
+      "timestamp": "37:30",
+      "endTimestamp": "37:39",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2250s",
+      "text": "So, you know, if you maybe already know what you want your character to look like, then you can kind of use it and animate, let's say, a given image."
+    },
+    {
+      "index": 412,
+      "start": 2260.02,
+      "end": 2264.6,
+      "timestamp": "37:40",
+      "endTimestamp": "37:45",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2260s",
+      "text": "And again, it's an example of controlling the generative process."
+    },
+    {
+      "index": 413,
+      "start": 2264.6,
+      "end": 2266.52,
+      "timestamp": "37:45",
+      "endTimestamp": "37:47",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2264s",
+      "text": "Like, you can control it through text."
+    },
+    {
+      "index": 414,
+      "start": 2266.58,
+      "end": 2267.66,
+      "timestamp": "37:47",
+      "endTimestamp": "37:48",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2266s",
+      "text": "You can control it through images."
+    },
+    {
+      "index": 415,
+      "start": 2268.28,
+      "end": 2270.24,
+      "timestamp": "37:48",
+      "endTimestamp": "37:50",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2268s",
+      "text": "There are many different ways to do this."
+    },
+    {
+      "index": 416,
+      "start": 2273.84,
+      "end": 2274.28,
+      "timestamp": "37:54",
+      "endTimestamp": "37:54",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2273s",
+      "text": "Yeah."
+    },
+    {
+      "index": 417,
+      "start": 2274.38,
+      "end": 2280.1,
+      "timestamp": "37:54",
+      "endTimestamp": "38:00",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2274s",
+      "text": "And this is actually from a PhD student, a former PhD student in our group."
+    },
+    {
+      "index": 418,
+      "start": 2280.44,
+      "end": 2282.8,
+      "timestamp": "38:00",
+      "endTimestamp": "38:03",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2280s",
+      "text": "So, yeah, it's a system that they are developing."
+    },
+    {
+      "index": 419,
+      "start": 2283.04,
+      "end": 2283.7599999999998,
+      "timestamp": "38:03",
+      "endTimestamp": "38:04",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2283s",
+      "text": "It's very good."
+    },
+    {
+      "index": 420,
+      "start": 2283.88,
+      "end": 2284.52,
+      "timestamp": "38:04",
+      "endTimestamp": "38:05",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2283s",
+      "text": "I agree with you."
+    },
+    {
+      "index": 421,
+      "start": 2286.38,
+      "end": 2287.54,
+      "timestamp": "38:06",
+      "endTimestamp": "38:08",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2286s",
+      "text": "Pretty impressive stuff."
+    },
+    {
+      "index": 422,
+      "start": 2287.54,
+      "end": 2292.86,
+      "timestamp": "38:08",
+      "endTimestamp": "38:13",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2287s",
+      "text": "So that's the kind of thing you can do once you learn this material very well."
+    },
+    {
+      "index": 423,
+      "start": 2294.54,
+      "end": 2295.18,
+      "timestamp": "38:15",
+      "endTimestamp": "38:15",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2294s",
+      "text": "All right."
+    },
+    {
+      "index": 424,
+      "start": 2295.24,
+      "end": 2302.6,
+      "timestamp": "38:15",
+      "endTimestamp": "38:23",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2295s",
+      "text": "Other completely different sort of application area, sort of like decision-making, robotics."
+    },
+    {
+      "index": 425,
+      "start": 2303.48,
+      "end": 2312.02,
+      "timestamp": "38:23",
+      "endTimestamp": "38:32",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2303s",
+      "text": "This kind of, a lot of these domains, what you care about is taking actions in the world to achieve a certain goal."
+    },
+    {
+      "index": 426,
+      "start": 2312.14,
+      "end": 2314.9,
+      "timestamp": "38:32",
+      "endTimestamp": "38:35",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2312s",
+      "text": "Let's say driving a car or stacking some objects."
+    },
+    {
+      "index": 427,
+      "start": 2314.9,
+      "end": 2320.3,
+      "timestamp": "38:35",
+      "endTimestamp": "38:40",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2314s",
+      "text": "And so at the end of the day, you can think of it as generating a sequence of actions that make sense."
+    },
+    {
+      "index": 428,
+      "start": 2320.3,
+      "end": 2331.6000000000004,
+      "timestamp": "38:40",
+      "endTimestamp": "38:52",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2320s",
+      "text": "And so, again, the kind of machinery that we're going to talk about in this course translates pretty well to a lot of what we call imitation learning problems,"
+    },
+    {
+      "index": 429,
+      "start": 2331.6,
+      "end": 2335.7599999999998,
+      "timestamp": "38:52",
+      "endTimestamp": "38:56",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2331s",
+      "text": "where you are given examples of good behavior provided maybe by a human."
+    },
+    {
+      "index": 430,
+      "start": 2335.7599999999998,
+      "end": 2339.7,
+      "timestamp": "38:56",
+      "endTimestamp": "39:00",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2335s",
+      "text": "And you want your model to generate other behaviors that are good."
+    },
+    {
+      "index": 431,
+      "start": 2340.36,
+      "end": 2345.1,
+      "timestamp": "39:00",
+      "endTimestamp": "39:05",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2340s",
+      "text": "For example, you want the model to learn how to drive the car or how to stack objects."
+    },
+    {
+      "index": 432,
+      "start": 2345.1,
+      "end": 2354.7999999999997,
+      "timestamp": "39:05",
+      "endTimestamp": "39:15",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2345s",
+      "text": "And so here's an example of how you can kind of like use these sort of techniques that we're going to talk about in the course to learn how to drive the car in this video game."
+    },
+    {
+      "index": 433,
+      "start": 2356.7999999999997,
+      "end": 2367.9,
+      "timestamp": "39:17",
+      "endTimestamp": "39:28",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2356s",
+      "text": "And you have to figure out, of course, what sort of actions make sense and to not crash into other cars and stay on the road and so forth."
+    },
+    {
+      "index": 434,
+      "start": 2367.9,
+      "end": 2374.98,
+      "timestamp": "39:28",
+      "endTimestamp": "39:35",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2367s",
+      "text": "This is non-trivial, again, but if you have a good generative model, then you can make good decisions in this simulator."
+    },
+    {
+      "index": 435,
+      "start": 2376.12,
+      "end": 2382.86,
+      "timestamp": "39:36",
+      "endTimestamp": "39:43",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2376s",
+      "text": "This is an example where you can kind of like train a diffusion model in this case to stack objects."
+    },
+    {
+      "index": 436,
+      "start": 2383.84,
+      "end": 2387.08,
+      "timestamp": "39:44",
+      "endTimestamp": "39:47",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2383s",
+      "text": "So, again, you sort of like need to figure out what sort of trajectories make sense."
+    },
+    {
+      "index": 437,
+      "start": 2387.32,
+      "end": 2390.96,
+      "timestamp": "39:47",
+      "endTimestamp": "39:51",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2387s",
+      "text": "And if you have a good model that understands which trajectories have the right structure,"
+    },
+    {
+      "index": 438,
+      "start": 2390.96,
+      "end": 2397.28,
+      "timestamp": "39:51",
+      "endTimestamp": "39:57",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2390s",
+      "text": "then you can use it to stack a different set of objects and you can control the model to produce high-quality policies."
+    },
+    {
+      "index": 439,
+      "start": 2399.5,
+      "end": 2407.56,
+      "timestamp": "40:00",
+      "endTimestamp": "40:08",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2399s",
+      "text": "There's a lot of excitement in the scientific science and engineering around generative models."
+    },
+    {
+      "index": 440,
+      "start": 2407.56,
+      "end": 2419.4,
+      "timestamp": "40:08",
+      "endTimestamp": "40:19",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2407s",
+      "text": "One of your TAs is one of the world's experts on using generative models to synthesize molecules that have certain properties or like proteins that have certain properties."
+    },
+    {
+      "index": 441,
+      "start": 2419.4,
+      "end": 2429.4,
+      "timestamp": "40:19",
+      "endTimestamp": "40:29",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2419s",
+      "text": "And either on the level of their structure or even at the 3D level, can I really understand the layout of these molecules."
+    },
+    {
+      "index": 442,
+      "start": 2430.46,
+      "end": 2441.8,
+      "timestamp": "40:30",
+      "endTimestamp": "40:42",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2430s",
+      "text": "And, yeah, there is a lot of interest in this space around building generative models to design drugs or to design better catalysts."
+    },
+    {
+      "index": 443,
+      "start": 2441.8,
+      "end": 2450.34,
+      "timestamp": "40:42",
+      "endTimestamp": "40:50",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2441s",
+      "text": "So, at the end of the day, you can think of it as, again, some kind of generative model where you have to come up with a recipe that does well at a certain task."
+    },
+    {
+      "index": 444,
+      "start": 2450.34,
+      "end": 2457.94,
+      "timestamp": "40:50",
+      "endTimestamp": "40:58",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2450s",
+      "text": "And if you have trained a model on a lot of data on what kind of, let's say, proteins perform well in a certain task,"
+    },
+    {
+      "index": 445,
+      "start": 2458.0,
+      "end": 2463.7000000000003,
+      "timestamp": "40:58",
+      "endTimestamp": "41:04",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2458s",
+      "text": "then you might be able to generate a sequence of amino acids that perform even better than the things we have."
+    },
+    {
+      "index": 446,
+      "start": 2464.42,
+      "end": 2472.0,
+      "timestamp": "41:04",
+      "endTimestamp": "41:12",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2464s",
+      "text": "Or you might be able to design a drug that binds in a certain way because you're targeting, let's say, COVID or something."
+    },
+    {
+      "index": 447,
+      "start": 2472.0,
+      "end": 2482.46,
+      "timestamp": "41:12",
+      "endTimestamp": "41:22",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2472s",
+      "text": "And so there is a lot of interest around building generative models over modalities that are somewhat different from the typical ones."
+    },
+    {
+      "index": 448,
+      "start": 2482.54,
+      "end": 2483.88,
+      "timestamp": "41:23",
+      "endTimestamp": "41:24",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2482s",
+      "text": "It's not images. It's not text."
+    },
+    {
+      "index": 449,
+      "start": 2484.06,
+      "end": 2486.04,
+      "timestamp": "41:24",
+      "endTimestamp": "41:26",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2484s",
+      "text": "But it's the same generative models."
+    },
+    {
+      "index": 450,
+      "start": 2486.16,
+      "end": 2487.7,
+      "timestamp": "41:26",
+      "endTimestamp": "41:28",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2486s",
+      "text": "It's still diffusion models."
+    },
+    {
+      "index": 451,
+      "start": 2487.82,
+      "end": 2489.36,
+      "timestamp": "41:28",
+      "endTimestamp": "41:29",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2487s",
+      "text": "There's going to be autoregressive models."
+    },
+    {
+      "index": 452,
+      "start": 2489.7,
+      "end": 2494.74,
+      "timestamp": "41:30",
+      "endTimestamp": "41:35",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2489s",
+      "text": "It's going to be the kind of models we're going to talk about in this course."
+    },
+    {
+      "index": 453,
+      "start": 2496.84,
+      "end": 2500.7,
+      "timestamp": "41:37",
+      "endTimestamp": "41:41",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2496s",
+      "text": "And, right, so lots of excitement."
+    },
+    {
+      "index": 454,
+      "start": 2500.7,
+      "end": 2512.58,
+      "timestamp": "41:41",
+      "endTimestamp": "41:53",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2500s",
+      "text": "There is other, you know, many other modalities that I didn't put in this LIDAC where there's been progress generating 3D objects."
+    },
+    {
+      "index": 455,
+      "start": 2512.8399999999997,
+      "end": 2518.2,
+      "timestamp": "41:53",
+      "endTimestamp": "41:58",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2512s",
+      "text": "That's another very exciting kind of like area and many more."
+    },
+    {
+      "index": 456,
+      "start": 2518.7,
+      "end": 2523.8799999999997,
+      "timestamp": "41:59",
+      "endTimestamp": "42:04",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2518s",
+      "text": "Of course, there is also a bit of worry."
+    },
+    {
+      "index": 457,
+      "start": 2523.88,
+      "end": 2536.8,
+      "timestamp": "42:04",
+      "endTimestamp": "42:17",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2523s",
+      "text": "And hopefully we'll get to talk about it a bit in the class around, you know, computers are getting so good at generating content that it's hard to distinguish from the real one."
+    },
+    {
+      "index": 458,
+      "start": 2537.2400000000002,
+      "end": 2539.62,
+      "timestamp": "42:17",
+      "endTimestamp": "42:20",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2537s",
+      "text": "You know, there is this big issue around deepfakes."
+    },
+    {
+      "index": 459,
+      "start": 2539.94,
+      "end": 2541.94,
+      "timestamp": "42:20",
+      "endTimestamp": "42:22",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2539s",
+      "text": "You know, which one is real, which one is fake?"
+    },
+    {
+      "index": 460,
+      "start": 2542.4,
+      "end": 2544.4,
+      "timestamp": "42:22",
+      "endTimestamp": "42:24",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2542s",
+      "text": "This was produced again by my students."
+    },
+    {
+      "index": 461,
+      "start": 2544.4,
+      "end": 2549.9,
+      "timestamp": "42:24",
+      "endTimestamp": "42:30",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2544s",
+      "text": "I think I kind of get a sense of the sort of dangers that these kind of technologies can have."
+    },
+    {
+      "index": 462,
+      "start": 2550.1800000000003,
+      "end": 2554.8,
+      "timestamp": "42:30",
+      "endTimestamp": "42:35",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2550s",
+      "text": "And there is a lot of potential for misuse of these sort of systems."
+    },
+    {
+      "index": 463,
+      "start": 2555.02,
+      "end": 2558.44,
+      "timestamp": "42:35",
+      "endTimestamp": "42:38",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2555s",
+      "text": "So hopefully we'll get to talk about that too in the class."
+    },
+    {
+      "index": 464,
+      "start": 2559.6800000000003,
+      "end": 2560.7400000000002,
+      "timestamp": "42:40",
+      "endTimestamp": "42:41",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2559s",
+      "text": "So, all right."
+    },
+    {
+      "index": 465,
+      "start": 2560.78,
+      "end": 2564.4,
+      "timestamp": "42:41",
+      "endTimestamp": "42:44",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2560s",
+      "text": "So that was sort of like the intro."
+    },
+    {
+      "index": 466,
+      "start": 2565.54,
+      "end": 2568.02,
+      "timestamp": "42:46",
+      "endTimestamp": "42:48",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2565s",
+      "text": "Hopefully it got you excited about the topic."
+    },
+    {
+      "index": 467,
+      "start": 2568.02,
+      "end": 2572.6,
+      "timestamp": "42:48",
+      "endTimestamp": "42:53",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2568s",
+      "text": "And it kind of like showed you that it's really an exciting time to be working in this area."
+    },
+    {
+      "index": 468,
+      "start": 2572.68,
+      "end": 2577.72,
+      "timestamp": "42:53",
+      "endTimestamp": "42:58",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2572s",
+      "text": "And that's why there's so much excitement also in the industry and in academia around these topics."
+    },
+    {
+      "index": 469,
+      "start": 2577.86,
+      "end": 2585.0,
+      "timestamp": "42:58",
+      "endTimestamp": "43:05",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2577s",
+      "text": "Everybody's trying to innovate, build systems, figure out how to use them in the real world, find new applications."
+    },
+    {
+      "index": 470,
+      "start": 2585.84,
+      "end": 2588.54,
+      "timestamp": "43:06",
+      "endTimestamp": "43:09",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2585s",
+      "text": "So it's really an exciting time to study this."
+    },
+    {
+      "index": 471,
+      "start": 2588.54,
+      "end": 2601.14,
+      "timestamp": "43:09",
+      "endTimestamp": "43:21",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2588s",
+      "text": "The course is designed to really give you the, uncover the, what we think are the core concepts in this space."
+    },
+    {
+      "index": 472,
+      "start": 2602.6,
+      "end": 2609.22,
+      "timestamp": "43:23",
+      "endTimestamp": "43:29",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2602s",
+      "text": "Once you understand all the different building blocks, the kind of challenges, the kind of trade-offs that all these models do,"
+    },
+    {
+      "index": 473,
+      "start": 2610.18,
+      "end": 2615.22,
+      "timestamp": "43:30",
+      "endTimestamp": "43:35",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2610s",
+      "text": "then you can not only understand how existing systems work,"
+    },
+    {
+      "index": 474,
+      "start": 2615.3,
+      "end": 2618.42,
+      "timestamp": "43:35",
+      "endTimestamp": "43:38",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2615s",
+      "text": "but hopefully you can also, you know, design the next generation of these systems."
+    },
+    {
+      "index": 475,
+      "start": 2618.54,
+      "end": 2623.38,
+      "timestamp": "43:39",
+      "endTimestamp": "43:43",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2618s",
+      "text": "You can also improve them, figure out how to use them on a new application area."
+    },
+    {
+      "index": 476,
+      "start": 2625.02,
+      "end": 2629.14,
+      "timestamp": "43:45",
+      "endTimestamp": "43:49",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2625s",
+      "text": "Again, the system, the course is designed to be pretty rigorous."
+    },
+    {
+      "index": 477,
+      "start": 2629.56,
+      "end": 2630.92,
+      "timestamp": "43:50",
+      "endTimestamp": "43:51",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2629s",
+      "text": "There's going to be quite a bit of math."
+    },
+    {
+      "index": 478,
+      "start": 2631.2799999999997,
+      "end": 2634.66,
+      "timestamp": "43:51",
+      "endTimestamp": "43:55",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2631s",
+      "text": "It's really going to delve deep into the key ideas."
+    },
+    {
+      "index": 479,
+      "start": 2635.72,
+      "end": 2641.22,
+      "timestamp": "43:56",
+      "endTimestamp": "44:01",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2635s",
+      "text": "So we're going to talk a lot about representation, as we discussed."
+    },
+    {
+      "index": 480,
+      "start": 2641.68,
+      "end": 2644.8,
+      "timestamp": "44:02",
+      "endTimestamp": "44:05",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2641s",
+      "text": "The key building block is going to be statistical modeling."
+    },
+    {
+      "index": 481,
+      "start": 2644.98,
+      "end": 2646.7,
+      "timestamp": "44:05",
+      "endTimestamp": "44:07",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2644s",
+      "text": "We're going to be using probability distributions."
+    },
+    {
+      "index": 482,
+      "start": 2646.7,
+      "end": 2648.9399999999996,
+      "timestamp": "44:07",
+      "endTimestamp": "44:09",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2646s",
+      "text": "That's going to be the key building block."
+    },
+    {
+      "index": 483,
+      "start": 2649.74,
+      "end": 2655.6,
+      "timestamp": "44:10",
+      "endTimestamp": "44:16",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2649s",
+      "text": "And so we're going to talk a lot about how to represent these probability distributions,"
+    },
+    {
+      "index": 484,
+      "start": 2655.7599999999998,
+      "end": 2660.8199999999997,
+      "timestamp": "44:16",
+      "endTimestamp": "44:21",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2655s",
+      "text": "how to use neural networks to model probability distributions,"
+    },
+    {
+      "index": 485,
+      "start": 2660.8199999999997,
+      "end": 2662.8199999999997,
+      "timestamp": "44:21",
+      "endTimestamp": "44:23",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2660s",
+      "text": "where we have many random variables."
+    },
+    {
+      "index": 486,
+      "start": 2663.2,
+      "end": 2664.14,
+      "timestamp": "44:23",
+      "endTimestamp": "44:24",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2663s",
+      "text": "That is the challenge."
+    },
+    {
+      "index": 487,
+      "start": 2664.2599999999998,
+      "end": 2668.18,
+      "timestamp": "44:24",
+      "endTimestamp": "44:28",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2664s",
+      "text": "I mean, you've seen simple probability distributions, like Gaussians and things like that."
+    },
+    {
+      "index": 488,
+      "start": 2668.18,
+      "end": 2674.2599999999998,
+      "timestamp": "44:28",
+      "endTimestamp": "44:34",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2668s",
+      "text": "That doesn't work in this space because you have so many different things that you have to consider"
+    },
+    {
+      "index": 489,
+      "start": 2674.2599999999998,
+      "end": 2675.8999999999996,
+      "timestamp": "44:34",
+      "endTimestamp": "44:36",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2674s",
+      "text": "and you have to model at the same time."
+    },
+    {
+      "index": 490,
+      "start": 2676.3999999999996,
+      "end": 2682.5,
+      "timestamp": "44:36",
+      "endTimestamp": "44:42",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2676s",
+      "text": "And so you need to come up with clever ways to represent how all the different pixels in an image interact with each other"
+    },
+    {
+      "index": 491,
+      "start": 2682.5,
+      "end": 2686.16,
+      "timestamp": "44:42",
+      "endTimestamp": "44:46",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2682s",
+      "text": "or how the different words in a sentence, they are connected to each other."
+    },
+    {
+      "index": 492,
+      "start": 2686.16,
+      "end": 2693.14,
+      "timestamp": "44:46",
+      "endTimestamp": "44:53",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2686s",
+      "text": "And so a lot of the course content will focus on different ideas,"
+    },
+    {
+      "index": 493,
+      "start": 2693.44,
+      "end": 2697.94,
+      "timestamp": "44:53",
+      "endTimestamp": "44:58",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2693s",
+      "text": "the different trade-offs that you have to make when you build these kind of models."
+    },
+    {
+      "index": 494,
+      "start": 2699.14,
+      "end": 2700.44,
+      "timestamp": "44:59",
+      "endTimestamp": "45:00",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2699s",
+      "text": "We're going to talk about learning."
+    },
+    {
+      "index": 495,
+      "start": 2700.7799999999997,
+      "end": 2703.8199999999997,
+      "timestamp": "45:01",
+      "endTimestamp": "45:04",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2700s",
+      "text": "Again, these are going to be statistical generative models."
+    },
+    {
+      "index": 496,
+      "start": 2703.82,
+      "end": 2707.84,
+      "timestamp": "45:04",
+      "endTimestamp": "45:08",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2703s",
+      "text": "So there's always going to be data, and you're going to use the data to fit the models."
+    },
+    {
+      "index": 497,
+      "start": 2708.76,
+      "end": 2711.86,
+      "timestamp": "45:09",
+      "endTimestamp": "45:12",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2708s",
+      "text": "And there's many different ways to fit models."
+    },
+    {
+      "index": 498,
+      "start": 2711.96,
+      "end": 2714.2400000000002,
+      "timestamp": "45:12",
+      "endTimestamp": "45:14",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2711s",
+      "text": "There's many different kinds of loss functions that you can use."
+    },
+    {
+      "index": 499,
+      "start": 2714.34,
+      "end": 2716.28,
+      "timestamp": "45:14",
+      "endTimestamp": "45:16",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2714s",
+      "text": "There's the stuff that is used in diffusion models."
+    },
+    {
+      "index": 500,
+      "start": 2716.38,
+      "end": 2719.3,
+      "timestamp": "45:16",
+      "endTimestamp": "45:19",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2716s",
+      "text": "There's the stuff that is used in generative adversarial networks."
+    },
+    {
+      "index": 501,
+      "start": 2719.4,
+      "end": 2723.88,
+      "timestamp": "45:19",
+      "endTimestamp": "45:24",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2719s",
+      "text": "There is the stuff that is used in, let's say, large language models, autoregressive models."
+    },
+    {
+      "index": 502,
+      "start": 2724.4,
+      "end": 2728.92,
+      "timestamp": "45:24",
+      "endTimestamp": "45:29",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2724s",
+      "text": "Those are essentially boiled down to different ways of comparing these probability distributions."
+    },
+    {
+      "index": 503,
+      "start": 2729.36,
+      "end": 2730.6800000000003,
+      "timestamp": "45:29",
+      "endTimestamp": "45:31",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2729s",
+      "text": "You have a data distribution."
+    },
+    {
+      "index": 504,
+      "start": 2731.2400000000002,
+      "end": 2732.7000000000003,
+      "timestamp": "45:31",
+      "endTimestamp": "45:33",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2731s",
+      "text": "You have the model distribution."
+    },
+    {
+      "index": 505,
+      "start": 2732.7,
+      "end": 2738.0,
+      "timestamp": "45:33",
+      "endTimestamp": "45:38",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2732s",
+      "text": "And you want those two things to be similar so that when you generate samples from the model,"
+    },
+    {
+      "index": 506,
+      "start": 2738.3199999999997,
+      "end": 2741.9399999999996,
+      "timestamp": "45:38",
+      "endTimestamp": "45:42",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2738s",
+      "text": "they look like the ones that came from the data distribution."
+    },
+    {
+      "index": 507,
+      "start": 2742.8799999999997,
+      "end": 2747.8399999999997,
+      "timestamp": "45:43",
+      "endTimestamp": "45:48",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2742s",
+      "text": "But probability distributions, again, going back to the first point, they are very complex."
+    },
+    {
+      "index": 508,
+      "start": 2748.06,
+      "end": 2752.7999999999997,
+      "timestamp": "45:48",
+      "endTimestamp": "45:53",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2748s",
+      "text": "If you have very complicated objects, very high-dimensional objects,"
+    },
+    {
+      "index": 509,
+      "start": 2753.18,
+      "end": 2756.2,
+      "timestamp": "45:53",
+      "endTimestamp": "45:56",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2753s",
+      "text": "so it's not straightforward to compare to probability distributions"
+    },
+    {
+      "index": 510,
+      "start": 2756.2,
+      "end": 2759.1,
+      "timestamp": "45:56",
+      "endTimestamp": "45:59",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2756s",
+      "text": "and kind of measure how similar they are."
+    },
+    {
+      "index": 511,
+      "start": 2759.3399999999997,
+      "end": 2761.68,
+      "timestamp": "45:59",
+      "endTimestamp": "46:02",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2759s",
+      "text": "So you have to sort of like, you have a data distribution."
+    },
+    {
+      "index": 512,
+      "start": 2761.68,
+      "end": 2764.06,
+      "timestamp": "46:02",
+      "endTimestamp": "46:04",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2761s",
+      "text": "You have a family of models that you can pick from."
+    },
+    {
+      "index": 513,
+      "start": 2764.4199999999996,
+      "end": 2767.8999999999996,
+      "timestamp": "46:04",
+      "endTimestamp": "46:08",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2764s",
+      "text": "And you kind of like have to pick one that is close to the data."
+    },
+    {
+      "index": 514,
+      "start": 2767.9,
+      "end": 2771.6800000000003,
+      "timestamp": "46:08",
+      "endTimestamp": "46:12",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2767s",
+      "text": "But measuring similarity is very difficult."
+    },
+    {
+      "index": 515,
+      "start": 2772.2000000000003,
+      "end": 2775.54,
+      "timestamp": "46:12",
+      "endTimestamp": "46:16",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2772s",
+      "text": "And depending on how you measure similarity, you're going to get different kinds of models"
+    },
+    {
+      "index": 516,
+      "start": 2775.54,
+      "end": 2778.42,
+      "timestamp": "46:16",
+      "endTimestamp": "46:18",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2775s",
+      "text": "that work well in different kinds of scenarios."
+    },
+    {
+      "index": 517,
+      "start": 2779.92,
+      "end": 2781.6800000000003,
+      "timestamp": "46:20",
+      "endTimestamp": "46:22",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2779s",
+      "text": "And then we're going to talk about inference."
+    },
+    {
+      "index": 518,
+      "start": 2781.9,
+      "end": 2786.82,
+      "timestamp": "46:22",
+      "endTimestamp": "46:27",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2781s",
+      "text": "We're going to talk about, you know, how to generate samples from these models efficiently."
+    },
+    {
+      "index": 519,
+      "start": 2786.82,
+      "end": 2791.6800000000003,
+      "timestamp": "46:27",
+      "endTimestamp": "46:32",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2786s",
+      "text": "Sometimes you have the probability distribution, but it might not be straightforward to sample from it."
+    },
+    {
+      "index": 520,
+      "start": 2792.26,
+      "end": 2794.0800000000004,
+      "timestamp": "46:32",
+      "endTimestamp": "46:34",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2792s",
+      "text": "So we will talk about that."
+    },
+    {
+      "index": 521,
+      "start": 2794.1800000000003,
+      "end": 2797.1000000000004,
+      "timestamp": "46:34",
+      "endTimestamp": "46:37",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2794s",
+      "text": "We will talk about how to invert the generative process,"
+    },
+    {
+      "index": 522,
+      "start": 2797.46,
+      "end": 2800.7000000000003,
+      "timestamp": "46:37",
+      "endTimestamp": "46:41",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2797s",
+      "text": "how to get representations from these objects."
+    },
+    {
+      "index": 523,
+      "start": 2800.7,
+      "end": 2809.7,
+      "timestamp": "46:41",
+      "endTimestamp": "46:50",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2800s",
+      "text": "For example, kind of like, sort of like, following and making the idea of vision as inverse graphic a little bit more concrete."
+    },
+    {
+      "index": 524,
+      "start": 2811.3199999999997,
+      "end": 2816.3799999999997,
+      "timestamp": "46:51",
+      "endTimestamp": "46:56",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2811s",
+      "text": "So we'll touch on unsupervised learning, different ways of sort of like clustering."
+    },
+    {
+      "index": 525,
+      "start": 2817.2799999999997,
+      "end": 2822.3799999999997,
+      "timestamp": "46:57",
+      "endTimestamp": "47:02",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2817s",
+      "text": "Because at the end of the day, what these models do is they have to find similarity between data points."
+    },
+    {
+      "index": 526,
+      "start": 2822.96,
+      "end": 2828.1,
+      "timestamp": "47:03",
+      "endTimestamp": "47:08",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2822s",
+      "text": "When you're trying to complete a sentence, what you have to do is you have to go through your training set."
+    },
+    {
+      "index": 527,
+      "start": 2828.1800000000003,
+      "end": 2829.4,
+      "timestamp": "47:08",
+      "endTimestamp": "47:09",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2828s",
+      "text": "You have to find similar sentences."
+    },
+    {
+      "index": 528,
+      "start": 2829.58,
+      "end": 2830.88,
+      "timestamp": "47:10",
+      "endTimestamp": "47:11",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2829s",
+      "text": "You have to figure out how to combine them."
+    },
+    {
+      "index": 529,
+      "start": 2830.92,
+      "end": 2834.98,
+      "timestamp": "47:11",
+      "endTimestamp": "47:15",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2830s",
+      "text": "And you have to figure out how to complete the prompt that you're given."
+    },
+    {
+      "index": 530,
+      "start": 2835.82,
+      "end": 2841.92,
+      "timestamp": "47:16",
+      "endTimestamp": "47:22",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2835s",
+      "text": "So once you have generative models, you can usually also get sort of like representations."
+    },
+    {
+      "index": 531,
+      "start": 2842.2200000000003,
+      "end": 2845.3,
+      "timestamp": "47:22",
+      "endTimestamp": "47:25",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2842s",
+      "text": "You have ways of clustering data points that have similar meaning."
+    },
+    {
+      "index": 532,
+      "start": 2846.8,
+      "end": 2848.7000000000003,
+      "timestamp": "47:27",
+      "endTimestamp": "47:29",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2846s",
+      "text": "And again, you can get features."
+    },
+    {
+      "index": 533,
+      "start": 2848.7,
+      "end": 2852.8999999999996,
+      "timestamp": "47:29",
+      "endTimestamp": "47:33",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2848s",
+      "text": "And you can do kind of like the sort of things you would want to do in unsupervised learning,"
+    },
+    {
+      "index": 534,
+      "start": 2853.1,
+      "end": 2856.68,
+      "timestamp": "47:33",
+      "endTimestamp": "47:37",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2853s",
+      "text": "which is do machine learning when you don't have labels."
+    },
+    {
+      "index": 535,
+      "start": 2856.8599999999997,
+      "end": 2861.56,
+      "timestamp": "47:37",
+      "endTimestamp": "47:42",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2856s",
+      "text": "You only have the X, but you don't have the Y."
+    },
+    {
+      "index": 536,
+      "start": 2862.06,
+      "end": 2867.4399999999996,
+      "timestamp": "47:42",
+      "endTimestamp": "47:47",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2862s",
+      "text": "And you want to do interesting things with the features themselves."
+    },
+    {
+      "index": 537,
+      "start": 2869.8999999999996,
+      "end": 2875.96,
+      "timestamp": "47:50",
+      "endTimestamp": "47:56",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2869s",
+      "text": "And so those are sort of like the three key ideas that are going to show up quite a bit."
+    },
+    {
+      "index": 538,
+      "start": 2875.96,
+      "end": 2884.58,
+      "timestamp": "47:56",
+      "endTimestamp": "48:05",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2875s",
+      "text": "In terms of models, we're going to be talking about first perhaps the simplest kind of model,"
+    },
+    {
+      "index": 539,
+      "start": 2885.18,
+      "end": 2890.28,
+      "timestamp": "48:05",
+      "endTimestamp": "48:10",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2885s",
+      "text": "which is one where essentially you have access to a likelihood directly."
+    },
+    {
+      "index": 540,
+      "start": 2891.48,
+      "end": 2895.5,
+      "timestamp": "48:11",
+      "endTimestamp": "48:16",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2891s",
+      "text": "And there's going to be two kinds of models in this space,"
+    },
+    {
+      "index": 541,
+      "start": 2895.62,
+      "end": 2897.7400000000002,
+      "timestamp": "48:16",
+      "endTimestamp": "48:18",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2895s",
+      "text": "autoregressive models and flow-based models."
+    },
+    {
+      "index": 542,
+      "start": 2898.3,
+      "end": 2901.14,
+      "timestamp": "48:18",
+      "endTimestamp": "48:21",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2898s",
+      "text": "Autoregressive models are the ones used in large language models"
+    },
+    {
+      "index": 543,
+      "start": 2901.14,
+      "end": 2904.1,
+      "timestamp": "48:21",
+      "endTimestamp": "48:24",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2901s",
+      "text": "and a few of other systems that I talked about today."
+    },
+    {
+      "index": 544,
+      "start": 2905.54,
+      "end": 2911.96,
+      "timestamp": "48:26",
+      "endTimestamp": "48:32",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2905s",
+      "text": "Flow-based models are a different kind of idea that is often used for images"
+    },
+    {
+      "index": 545,
+      "start": 2911.96,
+      "end": 2913.5,
+      "timestamp": "48:32",
+      "endTimestamp": "48:34",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2911s",
+      "text": "and other kinds of continuous data."
+    },
+    {
+      "index": 546,
+      "start": 2915.8799999999997,
+      "end": 2917.96,
+      "timestamp": "48:36",
+      "endTimestamp": "48:38",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2915s",
+      "text": "Then we'll talk about latent variable models."
+    },
+    {
+      "index": 547,
+      "start": 2918.42,
+      "end": 2922.72,
+      "timestamp": "48:38",
+      "endTimestamp": "48:43",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2918s",
+      "text": "The idea of using latent variables to increase the expressive power, essentially,"
+    },
+    {
+      "index": 548,
+      "start": 2922.8599999999997,
+      "end": 2924.98,
+      "timestamp": "48:43",
+      "endTimestamp": "48:45",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2922s",
+      "text": "of your generative models."
+    },
+    {
+      "index": 549,
+      "start": 2924.98,
+      "end": 2928.36,
+      "timestamp": "48:45",
+      "endTimestamp": "48:48",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2924s",
+      "text": "We'll talk about variational inference, variational learning,"
+    },
+    {
+      "index": 550,
+      "start": 2928.68,
+      "end": 2931.96,
+      "timestamp": "48:49",
+      "endTimestamp": "48:52",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2928s",
+      "text": "the variational autoencoder, hierarchical variational autoencoders,"
+    },
+    {
+      "index": 551,
+      "start": 2932.38,
+      "end": 2933.22,
+      "timestamp": "48:52",
+      "endTimestamp": "48:53",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2932s",
+      "text": "those sort of ideas."
+    },
+    {
+      "index": 552,
+      "start": 2934.04,
+      "end": 2936.54,
+      "timestamp": "48:54",
+      "endTimestamp": "48:57",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2934s",
+      "text": "We'll talk about implicit generative models."
+    },
+    {
+      "index": 553,
+      "start": 2936.96,
+      "end": 2941.7,
+      "timestamp": "48:57",
+      "endTimestamp": "49:02",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2936s",
+      "text": "Here the idea is that instead of representing the probability distribution, P of X,"
+    },
+    {
+      "index": 554,
+      "start": 2942.18,
+      "end": 2946.6,
+      "timestamp": "49:02",
+      "endTimestamp": "49:07",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2942s",
+      "text": "you're going to represent the sampling process that you use to generate samples."
+    },
+    {
+      "index": 555,
+      "start": 2947.46,
+      "end": 2948.88,
+      "timestamp": "49:07",
+      "endTimestamp": "49:09",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2947s",
+      "text": "And that has trade-offs."
+    },
+    {
+      "index": 556,
+      "start": 2948.88,
+      "end": 2951.84,
+      "timestamp": "49:09",
+      "endTimestamp": "49:12",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2948s",
+      "text": "It allows you to generate samples very efficiently,"
+    },
+    {
+      "index": 557,
+      "start": 2952.2200000000003,
+      "end": 2954.7400000000002,
+      "timestamp": "49:12",
+      "endTimestamp": "49:15",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2952s",
+      "text": "but it becomes difficult to train the models"
+    },
+    {
+      "index": 558,
+      "start": 2954.7400000000002,
+      "end": 2958.08,
+      "timestamp": "49:15",
+      "endTimestamp": "49:18",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2954s",
+      "text": "because you don't have access to a likelihood anymore."
+    },
+    {
+      "index": 559,
+      "start": 2958.26,
+      "end": 2960.8,
+      "timestamp": "49:18",
+      "endTimestamp": "49:21",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2958s",
+      "text": "So you cannot use maximum likelihood estimation,"
+    },
+    {
+      "index": 560,
+      "start": 2961.1600000000003,
+      "end": 2964.0,
+      "timestamp": "49:21",
+      "endTimestamp": "49:24",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2961s",
+      "text": "those kind of ideas that we understand very well."
+    },
+    {
+      "index": 561,
+      "start": 2964.58,
+      "end": 2966.96,
+      "timestamp": "49:25",
+      "endTimestamp": "49:27",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2964s",
+      "text": "And we know have good performance."
+    },
+    {
+      "index": 562,
+      "start": 2968.1,
+      "end": 2970.54,
+      "timestamp": "49:28",
+      "endTimestamp": "49:31",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2968s",
+      "text": "So we'll talk about two sample tests,"
+    },
+    {
+      "index": 563,
+      "start": 2970.98,
+      "end": 2974.42,
+      "timestamp": "49:31",
+      "endTimestamp": "49:34",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2970s",
+      "text": "F divergencies and different ways of training these sort of systems."
+    },
+    {
+      "index": 564,
+      "start": 2974.42,
+      "end": 2978.76,
+      "timestamp": "49:34",
+      "endTimestamp": "49:39",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2974s",
+      "text": "And in particular, we'll talk about generative adversarial networks"
+    },
+    {
+      "index": 565,
+      "start": 2978.76,
+      "end": 2980.54,
+      "timestamp": "49:39",
+      "endTimestamp": "49:41",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2978s",
+      "text": "and how to train them."
+    },
+    {
+      "index": 566,
+      "start": 2981.38,
+      "end": 2984.8,
+      "timestamp": "49:41",
+      "endTimestamp": "49:45",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2981s",
+      "text": "Then we'll talk about energy-based models and diffusion models."
+    },
+    {
+      "index": 567,
+      "start": 2985.66,
+      "end": 2988.54,
+      "timestamp": "49:46",
+      "endTimestamp": "49:49",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2985s",
+      "text": "Again, this is sort of like a state-of-the-art"
+    },
+    {
+      "index": 568,
+      "start": 2988.54,
+      "end": 2991.64,
+      "timestamp": "49:49",
+      "endTimestamp": "49:52",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2988s",
+      "text": "in terms of like image generation, audio generation."
+    },
+    {
+      "index": 569,
+      "start": 2992.14,
+      "end": 2994.26,
+      "timestamp": "49:52",
+      "endTimestamp": "49:54",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2992s",
+      "text": "People are starting to use them also for text."
+    },
+    {
+      "index": 570,
+      "start": 2996.16,
+      "end": 2998.84,
+      "timestamp": "49:56",
+      "endTimestamp": "49:59",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2996s",
+      "text": "That's what's the technology behind the video generation"
+    },
+    {
+      "index": 571,
+      "start": 2998.84,
+      "end": 2999.8,
+      "timestamp": "49:59",
+      "endTimestamp": "50:00",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=2998s",
+      "text": "that I showed you before."
+    },
+    {
+      "index": 572,
+      "start": 3001.0,
+      "end": 3003.42,
+      "timestamp": "50:01",
+      "endTimestamp": "50:03",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=3001s",
+      "text": "So we'll talk in depth about how they work"
+    },
+    {
+      "index": 573,
+      "start": 3003.42,
+      "end": 3006.48,
+      "timestamp": "50:03",
+      "endTimestamp": "50:06",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=3003s",
+      "text": "and how you can think of them in terms of a latent variable model"
+    },
+    {
+      "index": 574,
+      "start": 3006.48,
+      "end": 3009.44,
+      "timestamp": "50:06",
+      "endTimestamp": "50:09",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=3006s",
+      "text": "and the connections with all the other things."
+    },
+    {
+      "index": 575,
+      "start": 3010.5,
+      "end": 3015.16,
+      "timestamp": "50:10",
+      "endTimestamp": "50:15",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=3010s",
+      "text": "And, yeah, again, it's going to be a fairly mathematical class."
+    },
+    {
+      "index": 576,
+      "start": 3015.3,
+      "end": 3017.12,
+      "timestamp": "50:15",
+      "endTimestamp": "50:17",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=3015s",
+      "text": "So there's going to be a lot of theory."
+    },
+    {
+      "index": 577,
+      "start": 3017.28,
+      "end": 3018.7000000000003,
+      "timestamp": "50:17",
+      "endTimestamp": "50:19",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=3017s",
+      "text": "There's going to be algorithms."
+    },
+    {
+      "index": 578,
+      "start": 3019.14,
+      "end": 3020.88,
+      "timestamp": "50:19",
+      "endTimestamp": "50:21",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=3019s",
+      "text": "And I will go through applications."
+    },
+    {
+      "index": 579,
+      "start": 3022.16,
+      "end": 3023.52,
+      "timestamp": "50:22",
+      "endTimestamp": "50:24",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=3022s",
+      "text": "There is going to be homeworks."
+    },
+    {
+      "index": 580,
+      "start": 3023.52,
+      "end": 3025.44,
+      "timestamp": "50:24",
+      "endTimestamp": "50:25",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=3023s",
+      "text": "We're going to get to play around with these models."
+    },
+    {
+      "index": 581,
+      "start": 3025.44,
+      "end": 3031.3,
+      "timestamp": "50:25",
+      "endTimestamp": "50:31",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=3025s",
+      "text": "And, yeah, so in terms of prereqs,"
+    },
+    {
+      "index": 582,
+      "start": 3031.56,
+      "end": 3036.12,
+      "timestamp": "50:32",
+      "endTimestamp": "50:36",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=3031s",
+      "text": "we're expecting you to have taken at least a machine learning class."
+    },
+    {
+      "index": 583,
+      "start": 3037.12,
+      "end": 3041.26,
+      "timestamp": "50:37",
+      "endTimestamp": "50:41",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=3037s",
+      "text": "We'll try to cover, try to do as much as possible from scratch,"
+    },
+    {
+      "index": 584,
+      "start": 3041.26,
+      "end": 3044.96,
+      "timestamp": "50:41",
+      "endTimestamp": "50:45",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=3041s",
+      "text": "and we'll have some sections to go over some of the background content."
+    },
+    {
+      "index": 585,
+      "start": 3044.96,
+      "end": 3050.3,
+      "timestamp": "50:45",
+      "endTimestamp": "50:50",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=3044s",
+      "text": "But it might be pretty hard to take this class if you've never done any ML before."
+    },
+    {
+      "index": 586,
+      "start": 3050.3,
+      "end": 3058.38,
+      "timestamp": "50:50",
+      "endTimestamp": "50:58",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=3050s",
+      "text": "So you should be familiar with basic probability theory, calculus."
+    },
+    {
+      "index": 587,
+      "start": 3058.6400000000003,
+      "end": 3062.96,
+      "timestamp": "50:59",
+      "endTimestamp": "51:03",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=3058s",
+      "text": "We're going to use gradient descent, linear algebra, Bayes' rule,"
+    },
+    {
+      "index": 588,
+      "start": 3063.5,
+      "end": 3067.46,
+      "timestamp": "51:04",
+      "endTimestamp": "51:07",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=3063s",
+      "text": "those sort of things, basic calculus sort of stuff,"
+    },
+    {
+      "index": 589,
+      "start": 3067.9,
+      "end": 3069.1600000000003,
+      "timestamp": "51:08",
+      "endTimestamp": "51:09",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=3067s",
+      "text": "change of variable formula."
+    },
+    {
+      "index": 590,
+      "start": 3070.42,
+      "end": 3072.1000000000004,
+      "timestamp": "51:10",
+      "endTimestamp": "51:12",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=3070s",
+      "text": "Yeah, you should be familiar with that."
+    },
+    {
+      "index": 591,
+      "start": 3072.54,
+      "end": 3073.86,
+      "timestamp": "51:13",
+      "endTimestamp": "51:14",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=3072s",
+      "text": "Again, you can probably pick it up,"
+    },
+    {
+      "index": 592,
+      "start": 3074.0,
+      "end": 3078.5800000000004,
+      "timestamp": "51:14",
+      "endTimestamp": "51:19",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=3074s",
+      "text": "but it might be pretty tricky if you've never seen this sort of ideas before."
+    },
+    {
+      "index": 593,
+      "start": 3078.58,
+      "end": 3083.22,
+      "timestamp": "51:19",
+      "endTimestamp": "51:23",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=3078s",
+      "text": "And then, yeah, there is going to be programming assignments."
+    },
+    {
+      "index": 594,
+      "start": 3083.68,
+      "end": 3087.44,
+      "timestamp": "51:24",
+      "endTimestamp": "51:27",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=3083s",
+      "text": "So you should be familiar with, hopefully, Python."
+    },
+    {
+      "index": 595,
+      "start": 3087.6,
+      "end": 3089.22,
+      "timestamp": "51:28",
+      "endTimestamp": "51:29",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=3087s",
+      "text": "That's what we're going to use, PyTorch."
+    },
+    {
+      "index": 596,
+      "start": 3089.42,
+      "end": 3093.34,
+      "timestamp": "51:29",
+      "endTimestamp": "51:33",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=3089s",
+      "text": "So, again, we'll have a section on that if you've never seen it before."
+    },
+    {
+      "index": 597,
+      "start": 3093.5,
+      "end": 3097.14,
+      "timestamp": "51:34",
+      "endTimestamp": "51:37",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=3093s",
+      "text": "But it might be tricky if you've not done any of this before."
+    },
+    {
+      "index": 598,
+      "start": 3099.1,
+      "end": 3103.08,
+      "timestamp": "51:39",
+      "endTimestamp": "51:43",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=3099s",
+      "text": "And in terms of logistics, we have a website."
+    },
+    {
+      "index": 599,
+      "start": 3103.22,
+      "end": 3105.72,
+      "timestamp": "51:43",
+      "endTimestamp": "51:46",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=3103s",
+      "text": "It's not entirely updated."
+    },
+    {
+      "index": 600,
+      "start": 3105.72,
+      "end": 3108.7,
+      "timestamp": "51:46",
+      "endTimestamp": "51:49",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=3105s",
+      "text": "Some of the information might change."
+    },
+    {
+      "index": 601,
+      "start": 3109.2999999999997,
+      "end": 3110.74,
+      "timestamp": "51:49",
+      "endTimestamp": "51:51",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=3109s",
+      "text": "So keep checking it."
+    },
+    {
+      "index": 602,
+      "start": 3111.0,
+      "end": 3112.68,
+      "timestamp": "51:51",
+      "endTimestamp": "51:53",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=3111s",
+      "text": "We're finalizing some of the dates,"
+    },
+    {
+      "index": 603,
+      "start": 3112.9599999999996,
+      "end": 3117.7,
+      "timestamp": "51:53",
+      "endTimestamp": "51:58",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=3112s",
+      "text": "and we're trying to get confirmation about the rooms for the midterm and the poster session."
+    },
+    {
+      "index": 604,
+      "start": 3118.08,
+      "end": 3119.72,
+      "timestamp": "51:58",
+      "endTimestamp": "52:00",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=3118s",
+      "text": "But hopefully that will be done soon."
+    },
+    {
+      "index": 605,
+      "start": 3119.72,
+      "end": 3123.6,
+      "timestamp": "52:00",
+      "endTimestamp": "52:04",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=3119s",
+      "text": "We don't have a textbook."
+    },
+    {
+      "index": 606,
+      "start": 3124.3199999999997,
+      "end": 3126.08,
+      "timestamp": "52:04",
+      "endTimestamp": "52:06",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=3124s",
+      "text": "That actually doesn't exist."
+    },
+    {
+      "index": 607,
+      "start": 3127.2599999999998,
+      "end": 3133.48,
+      "timestamp": "52:07",
+      "endTimestamp": "52:13",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=3127s",
+      "text": "This was actually, I think, the first class when it was offered here a few years ago on this topic."
+    },
+    {
+      "index": 608,
+      "start": 3133.98,
+      "end": 3136.9399999999996,
+      "timestamp": "52:14",
+      "endTimestamp": "52:17",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=3133s",
+      "text": "Nothing like that existed, so we had to create it from scratch."
+    },
+    {
+      "index": 609,
+      "start": 3136.94,
+      "end": 3142.08,
+      "timestamp": "52:17",
+      "endTimestamp": "52:22",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=3136s",
+      "text": "And we put together a set of lecture notes that you can have access there,"
+    },
+    {
+      "index": 610,
+      "start": 3142.5,
+      "end": 3149.7200000000003,
+      "timestamp": "52:22",
+      "endTimestamp": "52:30",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=3142s",
+      "text": "where we try to cover what we, basically, the content that you can see in the slides."
+    },
+    {
+      "index": 611,
+      "start": 3150.18,
+      "end": 3156.66,
+      "timestamp": "52:30",
+      "endTimestamp": "52:37",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=3150s",
+      "text": "Some of it, you can see some of the content is covered in the deep learning book that you can see there."
+    },
+    {
+      "index": 612,
+      "start": 3157.8,
+      "end": 3159.36,
+      "timestamp": "52:38",
+      "endTimestamp": "52:39",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=3157s",
+      "text": "So that's a useful reference."
+    },
+    {
+      "index": 613,
+      "start": 3159.58,
+      "end": 3161.62,
+      "timestamp": "52:40",
+      "endTimestamp": "52:42",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=3159s",
+      "text": "It's available online, so you might want to check it out."
+    },
+    {
+      "index": 614,
+      "start": 3161.62,
+      "end": 3166.8399999999997,
+      "timestamp": "52:42",
+      "endTimestamp": "52:47",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=3161s",
+      "text": "And, yeah, we have a great team of teaching assistants."
+    },
+    {
+      "index": 615,
+      "start": 3168.06,
+      "end": 3174.12,
+      "timestamp": "52:48",
+      "endTimestamp": "52:54",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=3168s",
+      "text": "And, yeah, there should be a calendar now on the website with our office hours."
+    },
+    {
+      "index": 616,
+      "start": 3174.12,
+      "end": 3177.56,
+      "timestamp": "52:54",
+      "endTimestamp": "52:58",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=3174s",
+      "text": "So, of course, you're welcome to..."
+    },
+    {
+      "index": 617,
+      "start": 3177.56,
+      "end": 3178.94,
+      "timestamp": "52:58",
+      "endTimestamp": "52:59",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=3177s",
+      "text": "Most of them will start next week."
+    },
+    {
+      "index": 618,
+      "start": 3179.46,
+      "end": 3189.9,
+      "timestamp": "52:59",
+      "endTimestamp": "53:10",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=3179s",
+      "text": "But, yeah, otherwise feel free to reach out on Ed if you cannot find us in person this week."
+    },
+    {
+      "index": 619,
+      "start": 3189.9,
+      "end": 3191.8,
+      "timestamp": "53:10",
+      "endTimestamp": "53:12",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=3189s",
+      "text": "But, yeah, we're always happy to chat."
+    },
+    {
+      "index": 620,
+      "start": 3193.12,
+      "end": 3202.04,
+      "timestamp": "53:13",
+      "endTimestamp": "53:22",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=3193s",
+      "text": "In terms of grading and coursework, so it's going to be three homeworks."
+    },
+    {
+      "index": 621,
+      "start": 3202.4,
+      "end": 3206.86,
+      "timestamp": "53:22",
+      "endTimestamp": "53:27",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=3202s",
+      "text": "So the first one is going to be released Monday, next week."
+    },
+    {
+      "index": 622,
+      "start": 3207.5,
+      "end": 3214.04,
+      "timestamp": "53:28",
+      "endTimestamp": "53:34",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=3207s",
+      "text": "And they are worth 15% of the total grade each, 45% total."
+    },
+    {
+      "index": 623,
+      "start": 3214.04,
+      "end": 3217.88,
+      "timestamp": "53:34",
+      "endTimestamp": "53:38",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=3214s",
+      "text": "And they go over a mix of theory."
+    },
+    {
+      "index": 624,
+      "start": 3218.2799999999997,
+      "end": 3221.86,
+      "timestamp": "53:38",
+      "endTimestamp": "53:42",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=3218s",
+      "text": "And, again, there's going to be a programming assignment associated with all of them."
+    },
+    {
+      "index": 625,
+      "start": 3223.02,
+      "end": 3224.2799999999997,
+      "timestamp": "53:43",
+      "endTimestamp": "53:44",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=3223s",
+      "text": "We're going to have a midterm."
+    },
+    {
+      "index": 626,
+      "start": 3224.48,
+      "end": 3227.16,
+      "timestamp": "53:44",
+      "endTimestamp": "53:47",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=3224s",
+      "text": "It's going to be in-class, in-person midterm."
+    },
+    {
+      "index": 627,
+      "start": 3227.88,
+      "end": 3230.5,
+      "timestamp": "53:48",
+      "endTimestamp": "53:50",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=3227s",
+      "text": "And the big component of the class is going to be a project."
+    },
+    {
+      "index": 628,
+      "start": 3231.38,
+      "end": 3236.22,
+      "timestamp": "53:51",
+      "endTimestamp": "53:56",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=3231s",
+      "text": "We think there is so much to do in this space that it makes sense for you to really explore."
+    },
+    {
+      "index": 629,
+      "start": 3236.22,
+      "end": 3242.98,
+      "timestamp": "53:56",
+      "endTimestamp": "54:03",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=3236s",
+      "text": "There is going to account for, you know, 40% of the grades."
+    },
+    {
+      "index": 630,
+      "start": 3243.08,
+      "end": 3244.64,
+      "timestamp": "54:03",
+      "endTimestamp": "54:05",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=3243s",
+      "text": "It's going to be a pretty significant component."
+    },
+    {
+      "index": 631,
+      "start": 3245.66,
+      "end": 3248.08,
+      "timestamp": "54:06",
+      "endTimestamp": "54:08",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=3245s",
+      "text": "And there's a bunch of milestones."
+    },
+    {
+      "index": 632,
+      "start": 3248.3599999999997,
+      "end": 3249.4599999999996,
+      "timestamp": "54:08",
+      "endTimestamp": "54:09",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=3248s",
+      "text": "You're going to start with a proposal."
+    },
+    {
+      "index": 633,
+      "start": 3250.16,
+      "end": 3256.2999999999997,
+      "timestamp": "54:10",
+      "endTimestamp": "54:16",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=3250s",
+      "text": "There's going to be a report that you have kind of like to turn in about how things are going."
+    },
+    {
+      "index": 634,
+      "start": 3257.22,
+      "end": 3260.04,
+      "timestamp": "54:17",
+      "endTimestamp": "54:20",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=3257s",
+      "text": "There's going to be a poster presentation towards the end."
+    },
+    {
+      "index": 635,
+      "start": 3260.04,
+      "end": 3263.1,
+      "timestamp": "54:20",
+      "endTimestamp": "54:23",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=3260s",
+      "text": "And then a final report on the work you did."
+    },
+    {
+      "index": 636,
+      "start": 3264.84,
+      "end": 3266.56,
+      "timestamp": "54:25",
+      "endTimestamp": "54:27",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=3264s",
+      "text": "And, yeah, projects."
+    },
+    {
+      "index": 637,
+      "start": 3267.48,
+      "end": 3272.22,
+      "timestamp": "54:27",
+      "endTimestamp": "54:32",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=3267s",
+      "text": "I think I like this class, which really gives you an opportunity to explore."
+    },
+    {
+      "index": 638,
+      "start": 3272.5,
+      "end": 3277.9,
+      "timestamp": "54:32",
+      "endTimestamp": "54:38",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=3272s",
+      "text": "And there's just so much that you can do in this space that there's lots of interesting project ideas"
+    },
+    {
+      "index": 639,
+      "start": 3277.9,
+      "end": 3281.06,
+      "timestamp": "54:38",
+      "endTimestamp": "54:41",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=3277s",
+      "text": "that turned out to be papers, turned out to be company ideas."
+    },
+    {
+      "index": 640,
+      "start": 3282.16,
+      "end": 3283.52,
+      "timestamp": "54:42",
+      "endTimestamp": "54:44",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=3282s",
+      "text": "Lots of excitement here."
+    },
+    {
+      "index": 641,
+      "start": 3284.2599999999998,
+      "end": 3285.68,
+      "timestamp": "54:44",
+      "endTimestamp": "54:46",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=3284s",
+      "text": "You can work in groups."
+    },
+    {
+      "index": 642,
+      "start": 3286.0,
+      "end": 3287.34,
+      "timestamp": "54:46",
+      "endTimestamp": "54:47",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=3286s",
+      "text": "Let's say up to three students."
+    },
+    {
+      "index": 643,
+      "start": 3287.34,
+      "end": 3290.8,
+      "timestamp": "54:47",
+      "endTimestamp": "54:51",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=3287s",
+      "text": "And typically, it's one of these three things."
+    },
+    {
+      "index": 644,
+      "start": 3290.94,
+      "end": 3295.3,
+      "timestamp": "54:51",
+      "endTimestamp": "54:55",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=3290s",
+      "text": "Sometimes students apply an existing generative model to a new data set."
+    },
+    {
+      "index": 645,
+      "start": 3295.5,
+      "end": 3297.08,
+      "timestamp": "54:56",
+      "endTimestamp": "54:57",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=3295s",
+      "text": "Maybe they come from an application domain,"
+    },
+    {
+      "index": 646,
+      "start": 3297.26,
+      "end": 3301.46,
+      "timestamp": "54:57",
+      "endTimestamp": "55:01",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=3297s",
+      "text": "and they find out a new interesting way to use the models on a new problem,"
+    },
+    {
+      "index": 647,
+      "start": 3301.52,
+      "end": 3305.42,
+      "timestamp": "55:02",
+      "endTimestamp": "55:05",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=3301s",
+      "text": "or they compare different generative models on a new kind of data set."
+    },
+    {
+      "index": 648,
+      "start": 3306.7400000000002,
+      "end": 3310.0,
+      "timestamp": "55:07",
+      "endTimestamp": "55:10",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=3306s",
+      "text": "Sometimes people work on trying to just improve the models."
+    },
+    {
+      "index": 649,
+      "start": 3311.32,
+      "end": 3313.94,
+      "timestamp": "55:11",
+      "endTimestamp": "55:14",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=3311s",
+      "text": "Again, these things are pretty new."
+    },
+    {
+      "index": 650,
+      "start": 3313.94,
+      "end": 3317.62,
+      "timestamp": "55:14",
+      "endTimestamp": "55:18",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=3313s",
+      "text": "It's unlikely that we found the best way of solving these problems,"
+    },
+    {
+      "index": 651,
+      "start": 3317.76,
+      "end": 3319.36,
+      "timestamp": "55:18",
+      "endTimestamp": "55:19",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=3317s",
+      "text": "so there's still a lot of room for improvement."
+    },
+    {
+      "index": 652,
+      "start": 3320.26,
+      "end": 3322.86,
+      "timestamp": "55:20",
+      "endTimestamp": "55:23",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=3320s",
+      "text": "Often, you can combine different methods."
+    },
+    {
+      "index": 653,
+      "start": 3323.0,
+      "end": 3324.68,
+      "timestamp": "55:23",
+      "endTimestamp": "55:25",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=3323s",
+      "text": "You can take a diffusion model."
+    },
+    {
+      "index": 654,
+      "start": 3324.84,
+      "end": 3330.5,
+      "timestamp": "55:25",
+      "endTimestamp": "55:30",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=3324s",
+      "text": "You can add a little bit of generative adversarial training flavor to it,"
+    },
+    {
+      "index": 655,
+      "start": 3330.54,
+      "end": 3331.68,
+      "timestamp": "55:31",
+      "endTimestamp": "55:32",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=3330s",
+      "text": "and you can get big improvements."
+    },
+    {
+      "index": 656,
+      "start": 3331.68,
+      "end": 3338.8399999999997,
+      "timestamp": "55:32",
+      "endTimestamp": "55:39",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=3331s",
+      "text": "Often, these things can be published in top machine learning conferences if they work well."
+    },
+    {
+      "index": 657,
+      "start": 3339.96,
+      "end": 3342.7599999999998,
+      "timestamp": "55:40",
+      "endTimestamp": "55:43",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=3339s",
+      "text": "And sometimes people do more theoretical analysis."
+    },
+    {
+      "index": 658,
+      "start": 3343.46,
+      "end": 3346.06,
+      "timestamp": "55:43",
+      "endTimestamp": "55:46",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=3343s",
+      "text": "There's going to be quite a bit of theory, quite a bit of math,"
+    },
+    {
+      "index": 659,
+      "start": 3346.14,
+      "end": 3348.9199999999996,
+      "timestamp": "55:46",
+      "endTimestamp": "55:49",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=3346s",
+      "text": "and so there is room for improvement in trying to understand"
+    },
+    {
+      "index": 660,
+      "start": 3348.9199999999996,
+      "end": 3352.8199999999997,
+      "timestamp": "55:49",
+      "endTimestamp": "55:53",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=3348s",
+      "text": "why these models work, when they work, when they fail."
+    },
+    {
+      "index": 661,
+      "start": 3352.82,
+      "end": 3354.82,
+      "timestamp": "55:53",
+      "endTimestamp": "55:55",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=3352s",
+      "text": "Right now, it's all very, very empirical,"
+    },
+    {
+      "index": 662,
+      "start": 3355.2000000000003,
+      "end": 3364.7200000000003,
+      "timestamp": "55:55",
+      "endTimestamp": "56:05",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=3355s",
+      "text": "and we really need a better theory of why things like the one I've shown you before are possible."
+    },
+    {
+      "index": 663,
+      "start": 3365.48,
+      "end": 3370.86,
+      "timestamp": "56:05",
+      "endTimestamp": "56:11",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=3365s",
+      "text": "And so there is lots of room for developing a better theory in this space."
+    },
+    {
+      "index": 664,
+      "start": 3370.86,
+      "end": 3375.46,
+      "timestamp": "56:11",
+      "endTimestamp": "56:15",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=3370s",
+      "text": "And we'll also be suggesting possible projects,"
+    },
+    {
+      "index": 665,
+      "start": 3375.46,
+      "end": 3380.84,
+      "timestamp": "56:15",
+      "endTimestamp": "56:21",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=3375s",
+      "text": "so look out for some information about possible projects"
+    },
+    {
+      "index": 666,
+      "start": 3380.84,
+      "end": 3384.42,
+      "timestamp": "56:21",
+      "endTimestamp": "56:24",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=3380s",
+      "text": "that can be suggested by TAs or other faculty on campus."
+    },
+    {
+      "index": 667,
+      "start": 3385.58,
+      "end": 3391.1800000000003,
+      "timestamp": "56:26",
+      "endTimestamp": "56:31",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=3385s",
+      "text": "And we are able to provide some Google Cloud coupons."
+    },
+    {
+      "index": 668,
+      "start": 3391.56,
+      "end": 3394.1,
+      "timestamp": "56:32",
+      "endTimestamp": "56:34",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=3391s",
+      "text": "Not much, unfortunately, but at least a little bit."
+    },
+    {
+      "index": 669,
+      "start": 3394.9,
+      "end": 3398.1,
+      "timestamp": "56:35",
+      "endTimestamp": "56:38",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=3394s",
+      "text": "And so we'll figure out a way to distribute them to students."
+    },
+    {
+      "index": 670,
+      "start": 3398.1,
+      "end": 3404.16,
+      "timestamp": "56:38",
+      "endTimestamp": "56:44",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=3398s",
+      "text": "And if you want to get some inspiration for what kind of projects people worked on in previous years,"
+    },
+    {
+      "index": 671,
+      "start": 3404.3199999999997,
+      "end": 3410.7599999999998,
+      "timestamp": "56:44",
+      "endTimestamp": "56:51",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=3404s",
+      "text": "you can go to the old versions of the website, the 2019 and 2021 version."
+    },
+    {
+      "index": 672,
+      "start": 3411.22,
+      "end": 3414.94,
+      "timestamp": "56:51",
+      "endTimestamp": "56:55",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=3411s",
+      "text": "You can get a sense of the kind of projects people worked on,"
+    },
+    {
+      "index": 673,
+      "start": 3415.06,
+      "end": 3420.98,
+      "timestamp": "56:55",
+      "endTimestamp": "57:01",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=3415s",
+      "text": "and so you can get a sense of what's enough for a project,"
+    },
+    {
+      "index": 674,
+      "start": 3421.2999999999997,
+      "end": 3423.98,
+      "timestamp": "57:01",
+      "endTimestamp": "57:04",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=3421s",
+      "text": "what worked, what didn't, get some ideas."
+    },
+    {
+      "index": 675,
+      "start": 3423.98,
+      "end": 3430.82,
+      "timestamp": "57:04",
+      "endTimestamp": "57:11",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=3423s",
+      "text": "And, yeah, I think that was pretty much what I wanted to cover today."
+    },
+    {
+      "index": 676,
+      "start": 3431.56,
+      "end": 3434.62,
+      "timestamp": "57:12",
+      "endTimestamp": "57:15",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=3431s",
+      "text": "And I'm happy to take questions."
+    },
+    {
+      "index": 677,
+      "start": 3435.04,
+      "end": 3441.76,
+      "timestamp": "57:15",
+      "endTimestamp": "57:22",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=3435s",
+      "text": "And then next week, we're going to start with the background of the progressive models and so forth."
+    },
+    {
+      "index": 678,
+      "start": 3441.76,
+      "end": 3443.2000000000003,
+      "timestamp": "57:22",
+      "endTimestamp": "57:23",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=3441s",
+      "text": "So I really like to show you all the slide."
+    },
+    {
+      "index": 679,
+      "start": 3443.2000000000003,
+      "end": 3444.6200000000003,
+      "timestamp": "57:23",
+      "endTimestamp": "57:25",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=3443s",
+      "text": "I'm happy, you know, I'll hear you there."
+    },
+    {
+      "index": 680,
+      "start": 3444.6200000000003,
+      "end": 3445.28,
+      "timestamp": "57:25",
+      "endTimestamp": "57:25",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=3444s",
+      "text": "Thank you."
+    },
+    {
+      "index": 681,
+      "start": 3445.28,
+      "end": 3446.4,
+      "timestamp": "57:25",
+      "endTimestamp": "57:26",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=3445s",
+      "text": "Thank you."
+    },
+    {
+      "index": 682,
+      "start": 3446.4,
+      "end": 3476.38,
+      "timestamp": "57:26",
+      "endTimestamp": "57:56",
+      "url": "https://youtu.be/XZ0PMRWXBEU?t=3446s",
+      "text": "Thank you."
+    }
+  ]
+}

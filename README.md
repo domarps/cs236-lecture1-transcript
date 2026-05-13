@@ -3,8 +3,8 @@
 Static searchable transcript for Stanford CS236 Lecture 1, "Introduction."
 
 Open `index.html` locally, or host this repository with GitHub Pages from the
-repository root. Search results include clickable timestamps that jump to the
-matching point in the YouTube lecture.
+repository root. The page embeds the lecture video beside the searchable
+transcript, and timestamp clicks jump the embedded player to the matching point.
 
 ## Files
 
